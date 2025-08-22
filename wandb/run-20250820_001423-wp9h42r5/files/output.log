@@ -1,0 +1,23 @@
+***** Running training *****
+08/20/2025 00:14:29 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 5
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Num examples = 5
+  Dataloader size = 5
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Dataloader size = 5
+  Resume training from step 0
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+  Gradient Accumulation steps = 4
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 11.930383936 B
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 11.930383936 B
+  Master weight dtype: torch.float32
+08/20/2025 00:14:29 - INFO - utils.data_utils -     Master weight dtype: torch.float32
+Sampling Progress: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:19<00:00,  1.22s/it]
+08/20/2025 00:14:54 - INFO - utils.data_utils -   --> decode image and save to log dir...█████████████████████████████████████████████████████████| 16/16 [00:19<00:00,  1.19s/it]
+--> decode image and save to log dir...

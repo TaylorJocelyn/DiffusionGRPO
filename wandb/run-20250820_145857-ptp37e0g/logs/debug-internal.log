@@ -1,0 +1,6 @@
+{"time":"2025-08-20T14:58:58.361240869+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-20T14:58:58.75142959+08:00","level":"INFO","msg":"stream: created new stream","id":"ptp37e0g"}
+{"time":"2025-08-20T14:58:58.75146242+08:00","level":"INFO","msg":"stream: started","id":"ptp37e0g"}
+{"time":"2025-08-20T14:58:58.751485498+08:00","level":"INFO","msg":"handler: started","stream_id":"ptp37e0g"}
+{"time":"2025-08-20T14:58:58.751477924+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"ptp37e0g"}
+{"time":"2025-08-20T14:58:58.751499204+08:00","level":"INFO","msg":"sender: started","stream_id":"ptp37e0g"}

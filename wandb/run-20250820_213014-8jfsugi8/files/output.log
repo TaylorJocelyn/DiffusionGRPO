@@ -1,0 +1,21 @@
+***** Running training *****
+08/20/2025 21:30:20 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 5
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Num examples = 5
+  Dataloader size = 5
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Dataloader size = 5
+  Resume training from step 0
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+  Gradient Accumulation steps = 4
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 0.028975616 B
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 0.028975616 B
+  Master weight dtype: torch.bfloat16
+08/20/2025 21:30:20 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Steps:   0%|                                                                                            | 0/100000 [00:00<?, ?it/s]

@@ -1,0 +1,56 @@
+***** Running training *****
+08/20/2025 16:38:07 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 5
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Num examples = 5
+  Dataloader size = 5
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Dataloader size = 5
+  Resume training from step 0
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+  Gradient Accumulation steps = 4
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 0.028975616 B
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 0.028975616 B
+  Master weight dtype: torch.bfloat16
+08/20/2025 16:38:07 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:24<00:00,  1.55s/it]
+08/20/2025 16:38:35 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:24<00:00,  1.43s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:39:00 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:39:23 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:39:47 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.43s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:40:11 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:40:34 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.43s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:40:58 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.45s/it]
+08/20/2025 16:41:22 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:41:45 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:42:09 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:42:33 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/20/2025 16:42:56 - INFO - utils.data_utils -   --> decode image and save to log dir...██████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...

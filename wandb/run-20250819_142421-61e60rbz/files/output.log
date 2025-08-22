@@ -1,0 +1,120 @@
+***** Running training *****
+08/19/2025 14:24:26 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 5
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Num examples = 5
+  Dataloader size = 5
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Dataloader size = 5
+  Resume training from step 0
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+  Gradient Accumulation steps = 4
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 11.90140832 B
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 11.90140832 B
+  Master weight dtype: torch.float32
+08/19/2025 14:24:26 - INFO - utils.data_utils -     Master weight dtype: torch.float32
+Steps:   0%|                                                                                                  | 0/100000 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 196, in _run_module_as_main           | 0/16 [00:00<?, ?it/s]
+    return _run_code(code, main_globals, None,
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 1259, in <module>
+    main(args)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 904, in main
+    loss, grad_norm = train_one_step(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 591, in train_one_step
+    reward, all_latents, all_log_probs, sigma_schedule, all_image_ids = sample_reference_model(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 434, in sample_reference_model
+    z, latents, batch_latents, batch_log_probs = run_sample_step(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 242, in run_sample_step
+    cond_latents, cond_ids = encode_cond_images(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/flux/pipeline_tools.py", line 61, in encode_cond_images
+    images = pipeline.vae.encode(images).latent_dist.sample()
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/diffusers/utils/accelerate_utils.py", line 46, in wrapper
+    return method(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 282, in encode
+    h = self._encode(x)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 256, in _encode
+    enc = self.encoder(x)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/autoencoders/vae.py", line 156, in forward
+    sample = self.conv_in(sample)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+RuntimeError: Input type (float) and bias type (c10::BFloat16) should be the same
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+[rank0]:     cli.main()
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+[rank0]:     run()
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+[rank0]:     runpy.run_path(target, run_name="__main__")
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+[rank0]:     return _run_module_code(code, init_globals, run_name,
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+[rank0]:     _run_code(code, mod_globals, init_globals,
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 1259, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 904, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 591, in train_one_step
+[rank0]:     reward, all_latents, all_log_probs, sigma_schedule, all_image_ids = sample_reference_model(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 434, in sample_reference_model
+[rank0]:     z, latents, batch_latents, batch_log_probs = run_sample_step(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 242, in run_sample_step
+[rank0]:     cond_latents, cond_ids = encode_cond_images(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/flux/pipeline_tools.py", line 61, in encode_cond_images
+[rank0]:     images = pipeline.vae.encode(images).latent_dist.sample()
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/diffusers/utils/accelerate_utils.py", line 46, in wrapper
+[rank0]:     return method(self, *args, **kwargs)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 282, in encode
+[rank0]:     h = self._encode(x)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/autoencoders/autoencoder_kl.py", line 256, in _encode
+[rank0]:     enc = self.encoder(x)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/autoencoders/vae.py", line 156, in forward
+[rank0]:     sample = self.conv_in(sample)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
+[rank0]:     return self._conv_forward(input, self.weight, self.bias)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+[rank0]:     return F.conv2d(
+[rank0]: RuntimeError: Input type (float) and bias type (c10::BFloat16) should be the same

@@ -1,0 +1,27 @@
+***** Running training *****
+08/21/2025 11:14:01 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 5
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Num examples = 5
+  Dataloader size = 5
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Dataloader size = 5
+  Resume training from step 0
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+  Gradient Accumulation steps = 4
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 0.028975616 B
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 0.028975616 B
+  Master weight dtype: torch.bfloat16
+08/21/2025 11:14:01 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████| 16/16 [00:24<00:00,  1.51s/it]
+08/21/2025 11:14:28 - INFO - utils.data_utils -   --> decode image and save to log dir...██| 16/16 [00:24<00:00,  1.43s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|███████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+08/21/2025 11:14:52 - INFO - utils.data_utils -   --> decode image and save to log dir...██| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2460, 0.2396], device='cuda:0')}

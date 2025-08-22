@@ -1,0 +1,6 @@
+{"time":"2025-08-20T17:09:51.91209023+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-20T17:09:52.28357622+08:00","level":"INFO","msg":"stream: created new stream","id":"kymavoq4"}
+{"time":"2025-08-20T17:09:52.283602421+08:00","level":"INFO","msg":"stream: started","id":"kymavoq4"}
+{"time":"2025-08-20T17:09:52.283620589+08:00","level":"INFO","msg":"sender: started","stream_id":"kymavoq4"}
+{"time":"2025-08-20T17:09:52.283617951+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"kymavoq4"}
+{"time":"2025-08-20T17:09:52.283640125+08:00","level":"INFO","msg":"handler: started","stream_id":"kymavoq4"}

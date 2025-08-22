@@ -1,0 +1,6 @@
+{"time":"2025-08-20T16:58:21.74953189+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-20T16:58:22.232931628+08:00","level":"INFO","msg":"stream: created new stream","id":"rviml6re"}
+{"time":"2025-08-20T16:58:22.232963376+08:00","level":"INFO","msg":"stream: started","id":"rviml6re"}
+{"time":"2025-08-20T16:58:22.232977829+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"rviml6re"}
+{"time":"2025-08-20T16:58:22.232988877+08:00","level":"INFO","msg":"sender: started","stream_id":"rviml6re"}
+{"time":"2025-08-20T16:58:22.23300213+08:00","level":"INFO","msg":"handler: started","stream_id":"rviml6re"}

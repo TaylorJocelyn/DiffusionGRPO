@@ -1,0 +1,6 @@
+{"time":"2025-08-20T20:52:09.535916141+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-20T20:52:09.92949041+08:00","level":"INFO","msg":"stream: created new stream","id":"3vpl55na"}
+{"time":"2025-08-20T20:52:09.92952339+08:00","level":"INFO","msg":"stream: started","id":"3vpl55na"}
+{"time":"2025-08-20T20:52:09.929554538+08:00","level":"INFO","msg":"handler: started","stream_id":"3vpl55na"}
+{"time":"2025-08-20T20:52:09.929562354+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"3vpl55na"}
+{"time":"2025-08-20T20:52:09.929573821+08:00","level":"INFO","msg":"sender: started","stream_id":"3vpl55na"}

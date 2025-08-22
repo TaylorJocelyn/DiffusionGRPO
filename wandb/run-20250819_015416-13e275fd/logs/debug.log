@@ -1,0 +1,805 @@
+2025-08-19 01:54:16,478 INFO    MainThread:232948 [wandb_setup.py:_flush():80] Current SDK version is 0.21.0
+2025-08-19 01:54:16,478 INFO    MainThread:232948 [wandb_setup.py:_flush():80] Configure stats pid to 232948
+2025-08-19 01:54:16,478 INFO    MainThread:232948 [wandb_setup.py:_flush():80] Loading settings from /home/jinghan.zq/.config/wandb/settings
+2025-08-19 01:54:16,478 INFO    MainThread:232948 [wandb_setup.py:_flush():80] Loading settings from /mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/wandb/settings
+2025-08-19 01:54:16,478 INFO    MainThread:232948 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-08-19 01:54:16,479 INFO    MainThread:232948 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/wandb/run-20250819_015416-13e275fd/logs/debug.log
+2025-08-19 01:54:16,479 INFO    MainThread:232948 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/wandb/run-20250819_015416-13e275fd/logs/debug-internal.log
+2025-08-19 01:54:16,479 INFO    MainThread:232948 [wandb_init.py:init():830] calling init triggers
+2025-08-19 01:54:16,479 INFO    MainThread:232948 [wandb_init.py:init():835] wandb.init called with sweep_config: {}
+config: {'data_json_path': 'data/rl_embeddings/test.json', 'dataloader_num_workers': 4, 'train_batch_size': 1, 'num_latent_t': 1, 'pretrained_model_name_or_path': '/home/jinghan.zq/.cache/huggingface/hub/models--black-forest-labs--FLUX.1-dev/snapshots/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21', 'dit_model_name_or_path': None, 'vae_model_path': '/home/jinghan.zq/.cache/huggingface/hub/models--black-forest-labs--FLUX.1-dev/snapshots/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21', 'model_cache_dir': '/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/.cache', 'ema_decay': 0.995, 'ema_start_step': 0, 'cfg': 0.0, 'precondition_outputs': False, 'seed': 42, 'output_dir': 'data/outputs/grpo', 'checkpointing_steps': 40, 'resume_from_checkpoint': None, 'logging_dir': 'logs', 'max_train_steps': 300, 'gradient_accumulation_steps': 4, 'learning_rate': 1e-05, 'lr_warmup_steps': 0, 'max_grad_norm': 1.0, 'gradient_checkpointing': True, 'selective_checkpointing': 1.0, 'allow_tf32': True, 'mixed_precision': 'bf16', 'use_cpu_offload': False, 'sp_size': 1, 'train_sp_batch_size': 1, 'fsdp_sharding_startegy': 'full', 'lr_scheduler': 'constant_with_warmup', 'lr_num_cycles': 1, 'lr_power': 1.0, 'weight_decay': 0.0001, 'master_weight_type': 'fp32', 'h': 720, 'w': 720, 't': 1, 'sampling_steps': 16, 'eta': 0.3, 'sampler_seed': 1223627, 'loss_coef': 1.0, 'use_group': True, 'num_generations': 12, 'use_hpsv2': True, 'use_pickscore': False, 'ignore_last': True, 'init_same_noise': True, 'shift': 3.0, 'timestep_fraction': 0.6, 'clip_range': 0.0001, 'adv_clip_max': 5.0, 'log_dir': 'runs', 'use_ctr_reward': False, 'use_ecp_reward': False, 'use_aesthetics_reward': True, 'use_t2i_align_reward': False, '_wandb': {}}
+2025-08-19 01:54:16,479 INFO    MainThread:232948 [wandb_init.py:init():871] starting backend
+2025-08-19 01:54:16,822 INFO    MainThread:232948 [wandb_init.py:init():874] sending inform_init request
+2025-08-19 01:54:16,894 INFO    MainThread:232948 [wandb_init.py:init():882] backend started and connected
+2025-08-19 01:54:16,898 INFO    MainThread:232948 [wandb_init.py:init():953] updated telemetry
+2025-08-19 01:54:16,965 INFO    MainThread:232948 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2025-08-19 01:54:17,690 INFO    MainThread:232948 [wandb_init.py:init():1029] starting run threads in backend
+2025-08-19 01:54:24,809 INFO    MainThread:232948 [wandb_run.py:_console_start():2458] atexit reg
+2025-08-19 01:54:24,812 INFO    MainThread:232948 [wandb_run.py:_redirect():2306] redirect: wrap_raw
+2025-08-19 01:54:24,815 INFO    MainThread:232948 [wandb_run.py:_redirect():2375] Wrapping output streams.
+2025-08-19 01:54:24,815 INFO    MainThread:232948 [wandb_run.py:_redirect():2398] Redirects installed.
+2025-08-19 01:54:24,839 INFO    MainThread:232948 [wandb_init.py:init():1075] run started, returning control to user process
+2025-08-19 01:54:31,646 INFO    MsgRouterThr:232948 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.
+2025-08-19 01:54:33,649 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:33,927 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:33,931 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:33,935 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:33,939 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,012 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,098 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,099 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,102 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,106 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,111 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,112 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,116 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,121 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,133 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,134 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,139 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,158 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,167 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,168 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,172 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,176 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,218 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,219 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,222 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,226 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,241 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,250 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-08-19 01:54:34,259 ERROR   MainThread:232948 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2385, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 398, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 456, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1566, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 170, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 150, in send_server_request
+    self._send_message(msg)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 147, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 126, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
