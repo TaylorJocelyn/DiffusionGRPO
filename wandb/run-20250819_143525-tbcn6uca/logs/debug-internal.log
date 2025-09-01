@@ -1,0 +1,6 @@
+{"time":"2025-08-19T14:35:26.112370224+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-19T14:35:26.514059556+08:00","level":"INFO","msg":"stream: created new stream","id":"tbcn6uca"}
+{"time":"2025-08-19T14:35:26.514096394+08:00","level":"INFO","msg":"stream: started","id":"tbcn6uca"}
+{"time":"2025-08-19T14:35:26.514121306+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"tbcn6uca"}
+{"time":"2025-08-19T14:35:26.514124834+08:00","level":"INFO","msg":"sender: started","stream_id":"tbcn6uca"}
+{"time":"2025-08-19T14:35:26.514148376+08:00","level":"INFO","msg":"handler: started","stream_id":"tbcn6uca"}

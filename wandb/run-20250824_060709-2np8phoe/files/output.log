@@ -1,0 +1,32 @@
+***** Running training *****
+08/24/2025 06:07:11 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 2999
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Dataloader size = 2999
+  Resume training from step 0
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 2
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Instantaneous batch size per device = 2
+  Total train batch size (w. data & sequence parallel, accumulation) = 96.0
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 96.0
+  Gradient Accumulation steps = 12
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Gradient Accumulation steps = 12
+  Total optimization steps per epoch = 300
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 5.95070416 B
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 5.95070416 B
+  Master weight dtype: torch.float32
+08/24/2025 06:07:11 - INFO - utils.data_utils -     Master weight dtype: torch.float32
+Steps:   0%|                                                                                                                                                 | 0/100000 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1355, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1003, in main
+    flux_pipe,
+NameError: name 'flux_pipe' is not defined
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1355, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1003, in main
+[rank0]:     flux_pipe,
+[rank0]: NameError: name 'flux_pipe' is not defined

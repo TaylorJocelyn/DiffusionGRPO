@@ -1,0 +1,10 @@
+{"time":"2025-08-24T22:28:43.924669364+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-24T22:28:44.041060809+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-08-24T22:28:46.075271621+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-08-24T22:28:50.747757934+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-08-24T22:28:59.801993417+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-08-24T22:29:17.882503674+08:00","level":"INFO","msg":"stream: created new stream","id":"97gh97l5"}
+{"time":"2025-08-24T22:29:17.882552934+08:00","level":"INFO","msg":"stream: started","id":"97gh97l5"}
+{"time":"2025-08-24T22:29:17.882577734+08:00","level":"INFO","msg":"sender: started","stream_id":"97gh97l5"}
+{"time":"2025-08-24T22:29:17.882577944+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"97gh97l5"}
+{"time":"2025-08-24T22:29:17.882635023+08:00","level":"INFO","msg":"handler: started","stream_id":"97gh97l5"}

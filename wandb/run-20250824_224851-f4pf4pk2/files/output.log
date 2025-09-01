@@ -1,0 +1,105 @@
+***** Running training *****
+08/24/2025 22:48:53 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1500
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Dataloader size = 1500
+  Resume training from step 0
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 16.0
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 16.0
+  Gradient Accumulation steps = 2
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Gradient Accumulation steps = 2
+  Total optimization steps per epoch = 300
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.491297992 B
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.491297992 B
+  Master weight dtype: torch.bfloat16
+08/24/2025 22:48:53 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:31<00:00,  1.95s/it]
+08/24/2025 22:49:24 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:31<00:00,  1.40s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:22<00:00,  1.39s/it]
+08/24/2025 22:49:48 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:22<00:00,  1.39s/it]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.1852, 0.1863, 0.1881, 0.1805, 0.2292, 0.2313, 0.2332, 0.2209, 0.2737,
+        0.2742, 0.1842, 0.1909, 0.1946, 0.1838, 0.2375, 0.2350],
+       device='cuda:0')}
+Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1439, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1084, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 877, in train_one_step
+    loss.backward()
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+    torch.autograd.backward(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1125, in unpack_hook
+    frame.recompute_fn(*args)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1519, in recompute_fn
+    fn(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 254, in block_forward
+    ff_output = self.ff(norm_hidden_states)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/attention.py", line 1251, in forward
+    hidden_states = module(hidden_states)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/activations.py", line 89, in forward
+    hidden_states = self.gelu(hidden_states)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/activations.py", line 85, in gelu
+    return F.gelu(gate, approximate=self.approximate)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 95.07 GiB of which 31.50 MiB is free. Including non-PyTorch memory, this process has 95.04 GiB memory in use. Of the allocated memory 89.98 GiB is allocated by PyTorch, and 1.86 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1439, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1084, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 877, in train_one_step
+[rank0]:     loss.backward()
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/_tensor.py", line 626, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1125, in unpack_hook
+[rank0]:     frame.recompute_fn(*args)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1519, in recompute_fn
+[rank0]:     fn(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 254, in block_forward
+[rank0]:     ff_output = self.ff(norm_hidden_states)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/attention.py", line 1251, in forward
+[rank0]:     hidden_states = module(hidden_states)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/activations.py", line 89, in forward
+[rank0]:     hidden_states = self.gelu(hidden_states)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/activations.py", line 85, in gelu
+[rank0]:     return F.gelu(gate, approximate=self.approximate)
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 95.07 GiB of which 31.50 MiB is free. Including non-PyTorch memory, this process has 95.04 GiB memory in use. Of the allocated memory 89.98 GiB is allocated by PyTorch, and 1.86 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

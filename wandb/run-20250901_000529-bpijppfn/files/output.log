@@ -1,0 +1,122 @@
+***** Running training *****
+09/01/2025 00:06:39 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 3999
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Dataloader size = 3999
+  Resume training from step 0
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 12.0
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 12.0
+  Gradient Accumulation steps = 4
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 11.930383936 B
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 11.930383936 B
+  Master weight dtype: torch.float16
+09/01/2025 00:06:39 - INFO - utils.data_utils -     Master weight dtype: torch.float16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.45s/it]
+09/01/2025 00:07:03 - INFO - utils.data_utils -   --> decode image and save to log dir... 16/16 [00:23<00:00,  1.32s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████| 16/16 [00:21<00:00,  1.32s/it]
+09/01/2025 00:07:24 - INFO - utils.data_utils -   --> decode image and save to log dir... 16/16 [00:21<00:00,  1.31s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████| 16/16 [00:20<00:00,  1.31s/it]
+09/01/2025 00:07:45 - INFO - utils.data_utils -   --> decode image and save to log dir... 16/16 [00:20<00:00,  1.31s/it]
+--> decode image and save to log dir...
+Sampling Progress:  12%|████████▏                                                        | 2/16 [00:03<00:25,  1.85s/it]
+Traceback (most recent call last):                                                       | 2/16 [00:02<00:18,  1.31s/it]
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1538, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1184, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 772, in train_one_step
+    rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 601, in sample_reference_model
+    z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 415, in run_sample_step
+    pred = transformer(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1845, in _call_impl
+    return inner()
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1793, in inner
+    result = forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer_.py", line 209, in tranformer_forward
+    result = block(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 301, in single_block_forward
+    attn_output = attn_forward(
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 29, in attn_forward
+    value = attn.to_v(hidden_states)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/peft/tuners/lora/layer.py", line 769, in forward
+    result = result + lora_B(lora_A(dropout(x))) * scaling
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1845, in _call_impl
+    return inner()
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1806, in inner
+    hook_result = hook(self, args, result)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_fully_shard/_fsdp_state.py", line 71, in fsdp_hook_wrapper
+    return torch._dynamo.disable(func, recursive=True)(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 745, in _fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_fully_shard/_fsdp_state.py", line 265, in _post_forward
+    if self._mp_policy.output_dtype is not None:
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1538, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1184, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 772, in train_one_step
+[rank0]:     rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 601, in sample_reference_model
+[rank0]:     z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 415, in run_sample_step
+[rank0]:     pred = transformer(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1845, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1793, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer_.py", line 209, in tranformer_forward
+[rank0]:     result = block(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 301, in single_block_forward
+[rank0]:     attn_output = attn_forward(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 29, in attn_forward
+[rank0]:     value = attn.to_v(hidden_states)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/peft/tuners/lora/layer.py", line 769, in forward
+[rank0]:     result = result + lora_B(lora_A(dropout(x))) * scaling
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1845, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1806, in inner
+[rank0]:     hook_result = hook(self, args, result)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_fully_shard/_fsdp_state.py", line 71, in fsdp_hook_wrapper
+[rank0]:     return torch._dynamo.disable(func, recursive=True)(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 745, in _fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_fully_shard/_fsdp_state.py", line 265, in _post_forward
+[rank0]:     if self._mp_policy.output_dtype is not None:
+[rank0]: KeyboardInterrupt

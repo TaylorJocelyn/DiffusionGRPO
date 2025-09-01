@@ -1,0 +1,79 @@
+***** Running training *****
+08/19/2025 16:16:43 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 5
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Num examples = 5
+  Dataloader size = 5
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Dataloader size = 5
+  Resume training from step 0
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+  Gradient Accumulation steps = 4
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 11.90140832 B
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 11.90140832 B
+  Master weight dtype: torch.float32
+08/19/2025 16:16:43 - INFO - utils.data_utils -     Master weight dtype: torch.float32
+Sampling Progress: 100%|█████████████████████████████████████████████████████████████████████████████████| 16/16 [00:17<00:00,  1.06s/it]
+08/19/2025 16:17:06 - INFO - utils.data_utils -   --> decode image and save to log dir...████████████████| 16/16 [00:17<00:00,  1.04s/it]
+--> decode image and save to log dir...
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 1255, in <module>
+    main(args)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 900, in main
+    loss, grad_norm = train_one_step(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 587, in train_one_step
+    reward, all_latents, all_log_probs, sigma_schedule, all_image_ids = sample_reference_model(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 463, in sample_reference_model
+    os.makedirs(sample_save_path)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+NotADirectoryError: [Errno 20] Not a directory: '/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/runs/2025-08-19-16-15-06/run.log/samples'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+[rank0]:     cli.main()
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+[rank0]:     run()
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+[rank0]:     runpy.run_path(target, run_name="__main__")
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+[rank0]:     return _run_module_code(code, init_globals, run_name,
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+[rank0]:     _run_code(code, mod_globals, init_globals,
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 1255, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 900, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 587, in train_one_step
+[rank0]:     reward, all_latents, all_log_probs, sigma_schedule, all_image_ids = sample_reference_model(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 463, in sample_reference_model
+[rank0]:     os.makedirs(sample_save_path)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/os.py", line 225, in makedirs
+[rank0]:     mkdir(name, mode)
+[rank0]: NotADirectoryError: [Errno 20] Not a directory: '/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/runs/2025-08-19-16-15-06/run.log/samples'

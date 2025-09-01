@@ -1,0 +1,79 @@
+***** Running training *****
+08/24/2025 21:00:24 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1999
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Dataloader size = 1999
+  Resume training from step 0
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 2
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Instantaneous batch size per device = 2
+  Total train batch size (w. data & sequence parallel, accumulation) = 144.0
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 144.0
+  Gradient Accumulation steps = 12
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Gradient Accumulation steps = 12
+  Total optimization steps per epoch = 300
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 3.967136139 B
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 3.967136139 B
+  Master weight dtype: torch.bfloat16
+08/24/2025 21:00:24 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress:   0%|                                                                                                                                         | 0/20 [00:00<?, ?it/s]
+Traceback (most recent call last):                                                                                                                               | 0/20 [00:00<?, ?it/s]
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 548, in __getattr__
+    return super().__getattr__(name)  # defer to nn.Module's logic
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1928, in __getattr__
+    raise AttributeError(
+AttributeError: 'FullyShardedDataParallel' object has no attribute 'x_embedder_hs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1429, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1074, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 705, in train_one_step
+    rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 533, in sample_reference_model
+    z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 346, in run_sample_step
+    pred = tranformer_forward(
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer_.py", line 91, in tranformer_forward
+    print('x_embedder_hs ', self.x_embedder_hs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 550, in __getattr__
+    return getattr(self._fsdp_wrapped_module, name)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/modeling_utils.py", line 173, in __getattr__
+    return super().__getattr__(name)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1928, in __getattr__
+    raise AttributeError(
+AttributeError: 'FluxTransformer2DModel' object has no attribute 'x_embedder_hs'. Did you mean: 'x_embedder'?
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 548, in __getattr__
+[rank0]:     return super().__getattr__(name)  # defer to nn.Module's logic
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1928, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'FullyShardedDataParallel' object has no attribute 'x_embedder_hs'
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1429, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1074, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 705, in train_one_step
+[rank0]:     rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 533, in sample_reference_model
+[rank0]:     z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 346, in run_sample_step
+[rank0]:     pred = tranformer_forward(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer_.py", line 91, in tranformer_forward
+[rank0]:     print('x_embedder_hs ', self.x_embedder_hs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 550, in __getattr__
+[rank0]:     return getattr(self._fsdp_wrapped_module, name)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/modeling_utils.py", line 173, in __getattr__
+[rank0]:     return super().__getattr__(name)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1928, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'FluxTransformer2DModel' object has no attribute 'x_embedder_hs'. Did you mean: 'x_embedder'?

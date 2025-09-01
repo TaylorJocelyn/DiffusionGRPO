@@ -1,0 +1,109 @@
+***** Running training *****
+08/19/2025 01:21:21 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 5
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Num examples = 5
+  Dataloader size = 5
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Dataloader size = 5
+  Resume training from step 0
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+  Gradient Accumulation steps = 4
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 11.90140832 B
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 11.90140832 B
+  Master weight dtype: torch.float32
+08/19/2025 01:21:21 - INFO - utils.data_utils -     Master weight dtype: torch.float32
+Steps:   0%|                                                                                                                                                                | 0/100000 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 1142, in <module>
+    main(args)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 788, in main
+    loss, grad_norm = train_one_step(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 461, in train_one_step
+    ) = next(loader)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/utils/communications_flux.py", line 316, in sp_parallel_dataloader_wrapper
+    for data_item in dataloader:
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+    data = self._next_data()
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1480, in _next_data
+    return self._process_data(data)
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1505, in _process_data
+    data.reraise()
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/_utils.py", line 733, in reraise
+    raise exception
+TypeError: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/latent_flux_rl_datasets.py", line 95, in __getitem__
+    ori_img = transforms.ToTensor(Image.open(ori_img_path))
+TypeError: ToTensor.__init__() takes 1 positional argument but 2 were given
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+[rank0]:     cli.main()
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+[rank0]:     run()
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+[rank0]:     runpy.run_path(target, run_name="__main__")
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+[rank0]:     return _run_module_code(code, init_globals, run_name,
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+[rank0]:     _run_code(code, mod_globals, init_globals,
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 1142, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 788, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 461, in train_one_step
+[rank0]:     ) = next(loader)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/utils/communications_flux.py", line 316, in sp_parallel_dataloader_wrapper
+[rank0]:     for data_item in dataloader:
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 708, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1480, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1505, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/_utils.py", line 733, in reraise
+[rank0]:     raise exception
+[rank0]: TypeError: Caught TypeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/latent_flux_rl_datasets.py", line 95, in __getitem__
+[rank0]:     ori_img = transforms.ToTensor(Image.open(ori_img_path))
+[rank0]: TypeError: ToTensor.__init__() takes 1 positional argument but 2 were given

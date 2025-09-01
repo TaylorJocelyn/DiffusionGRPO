@@ -1,0 +1,87 @@
+***** Running training *****
+08/21/2025 02:58:28 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 5
+08/21/2025 02:58:28 - INFO - utils.data_utils -     Num examples = 5
+  Dataloader size = 5
+08/21/2025 02:58:28 - INFO - utils.data_utils -     Dataloader size = 5
+  Resume training from step 0
+08/21/2025 02:58:28 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/21/2025 02:58:28 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+08/21/2025 02:58:28 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 4.0
+  Gradient Accumulation steps = 4
+08/21/2025 02:58:28 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/21/2025 02:58:28 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 0.028975616 B
+08/21/2025 02:58:29 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 0.028975616 B
+  Master weight dtype: torch.bfloat16
+08/21/2025 02:58:29 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.48s/it]
+08/21/2025 02:58:55 - INFO - utils.data_utils -   --> decode image and save to log dir...████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.44s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.45s/it]
+08/21/2025 02:59:19 - INFO - utils.data_utils -   --> decode image and save to log dir...████████████████████████████████████████████████████████████████████████| 16/16 [00:23<00:00,  1.45s/it]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2460, 0.2396], device='cuda:0')}
+Traceback (most recent call last):
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 1342, in <module>
+    main(args)
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 987, in main
+    loss, grad_norm = train_one_step(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 755, in train_one_step
+    new_log_probs = grpo_one_step(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 352, in grpo_one_step
+    pred = tranformer_forward(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/flux/transformer.py", line 160, in tranformer_forward
+    encoder_hidden_states, hidden_states, condition_latents = block_forward(
+  File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/flux/block.py", line 221, in block_forward
+    hidden_states = hidden_states + attn_output
+RuntimeError: The size of tensor a (4096) must match the size of tensor b (7167) at non-singleton dimension 1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/home/jinghan.zq/.conda/envs/aigc_rl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+[rank0]:     cli.main()
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+[rank0]:     run()
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+[rank0]:     runpy.run_path(target, run_name="__main__")
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+[rank0]:     return _run_module_code(code, init_globals, run_name,
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+[rank0]:     _run_code(code, mod_globals, init_globals,
+[rank0]:   File "/home/admin/code-server-data/extensions/ms-python.python-2023.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 1342, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 987, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 755, in train_one_step
+[rank0]:     new_log_probs = grpo_one_step(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/train_grpo_flux.py", line 352, in grpo_one_step
+[rank0]:     pred = tranformer_forward(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/flux/transformer.py", line 160, in tranformer_forward
+[rank0]:     encoder_hidden_states, hidden_states, condition_latents = block_forward(
+[rank0]:   File "/mnt/workspace/user/zengdawei.zdw/shared/jinghan.zq/DiffusionRL/src/flux/block.py", line 221, in block_forward
+[rank0]:     hidden_states = hidden_states + attn_output
+[rank0]: RuntimeError: The size of tensor a (4096) must match the size of tensor b (7167) at non-singleton dimension 1

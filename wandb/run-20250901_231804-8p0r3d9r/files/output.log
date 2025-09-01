@@ -1,0 +1,185 @@
+***** Running training *****
+09/01/2025 23:18:06 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1714
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Dataloader size = 1714
+  Resume training from step 0
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 28.0
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 28.0
+  Gradient Accumulation steps = 4
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.700201222 B
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.700201222 B
+  Master weight dtype: torch.bfloat16
+09/01/2025 23:18:06 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:13<00:00,  1.16it/s]
+09/01/2025 23:18:20 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:13<00:00,  1.64it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.63it/s]
+09/01/2025 23:18:31 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+09/01/2025 23:18:42 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.63it/s]
+09/01/2025 23:18:52 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2537, 0.2520, 0.2551, 0.2427, 0.2317, 0.2236, 0.2283, 0.2269, 0.2781,
+        0.2715, 0.2849, 0.2834, 0.2888, 0.2708, 0.2837, 0.2788, 0.2788, 0.2766,
+        0.2832, 0.2844, 0.2649, 0.2761, 0.2654, 0.2754, 0.2898, 0.2854, 0.3037,
+        0.2827], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 23:19:15 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.5009
+09/01/2025 23:19:15 - INFO - utils.data_utils -   advantage 0.5009
+final loss: -0.0139
+09/01/2025 23:19:15 - INFO - utils.data_utils -   final loss: -0.0139
+idx i:  1
+ratio: 1.00
+09/01/2025 23:19:38 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.1960
+09/01/2025 23:19:38 - INFO - utils.data_utils -   advantage 0.1960
+final loss: -0.0054
+09/01/2025 23:19:38 - INFO - utils.data_utils -   final loss: -0.0054
+idx i:  2
+ratio: 1.00
+09/01/2025 23:20:01 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.7623
+09/01/2025 23:20:01 - INFO - utils.data_utils -   advantage 0.7623
+final loss: -0.0212
+09/01/2025 23:20:01 - INFO - utils.data_utils -   final loss: -0.0212
+Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1546, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1192, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 924, in train_one_step
+    new_log_probs = grpo_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 528, in grpo_one_step
+    pred = transformer(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py", line 522, in forward
+    encoder_hidden_states, hidden_states = block(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/algorithms/_checkpoint/checkpoint_wrapper.py", line 170, in forward
+    return self.checkpoint_fn(  # type: ignore[misc]
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/_compile.py", line 32, in inner
+    return disable_fn(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 745, in _fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 496, in checkpoint
+    ret = function(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py", line 175, in forward
+    norm_encoder_hidden_states, c_gate_msa, c_shift_mlp, c_scale_mlp, c_gate_mlp = self.norm1_context(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/normalization.py", line 170, in forward
+    x = self.norm(x) * (1 + scale_msa[:, None]) + shift_msa[:, None]
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/normalization.py", line 217, in forward
+    return F.layer_norm(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/functional.py", line 2910, in layer_norm
+    return torch.layer_norm(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1107, in pack_hook
+    with torch.no_grad():
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 77, in __init__
+    super().__init__()
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1546, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1192, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 924, in train_one_step
+[rank0]:     new_log_probs = grpo_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 528, in grpo_one_step
+[rank0]:     pred = transformer(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py", line 522, in forward
+[rank0]:     encoder_hidden_states, hidden_states = block(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/algorithms/_checkpoint/checkpoint_wrapper.py", line 170, in forward
+[rank0]:     return self.checkpoint_fn(  # type: ignore[misc]
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/_compile.py", line 32, in inner
+[rank0]:     return disable_fn(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 745, in _fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 496, in checkpoint
+[rank0]:     ret = function(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py", line 175, in forward
+[rank0]:     norm_encoder_hidden_states, c_gate_msa, c_shift_mlp, c_scale_mlp, c_gate_mlp = self.norm1_context(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/normalization.py", line 170, in forward
+[rank0]:     x = self.norm(x) * (1 + scale_msa[:, None]) + shift_msa[:, None]
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/normalization.py", line 217, in forward
+[rank0]:     return F.layer_norm(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/functional.py", line 2910, in layer_norm
+[rank0]:     return torch.layer_norm(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1107, in pack_hook
+[rank0]:     with torch.no_grad():
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 77, in __init__
+[rank0]:     super().__init__()
+[rank0]: KeyboardInterrupt

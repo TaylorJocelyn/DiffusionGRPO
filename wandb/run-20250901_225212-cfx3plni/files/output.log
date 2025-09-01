@@ -1,0 +1,374 @@
+***** Running training *****
+09/01/2025 22:52:14 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1714
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Dataloader size = 1714
+  Resume training from step 0
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 28.0
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 28.0
+  Gradient Accumulation steps = 4
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.700201222 B
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.700201222 B
+  Master weight dtype: torch.bfloat16
+09/01/2025 22:52:14 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:13<00:00,  1.16it/s]
+09/01/2025 22:52:28 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:13<00:00,  1.64it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.63it/s]
+09/01/2025 22:52:39 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.64it/s]
+09/01/2025 22:52:50 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.64it/s]
+09/01/2025 22:53:00 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2505, 0.2407, 0.2318, 0.2445, 0.2290, 0.2327, 0.2258, 0.2260, 0.2681,
+        0.2852, 0.2830, 0.2900, 0.2817, 0.2815, 0.2874, 0.2837, 0.2834, 0.2888,
+        0.2773, 0.2822, 0.2639, 0.2786, 0.2617, 0.2668, 0.2910, 0.2808, 0.3000,
+        0.2847], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 22:53:19 - INFO - utils.data_utils -   ratio: 1.00
+advantage 1.0997
+09/01/2025 22:53:19 - INFO - utils.data_utils -   advantage 1.0997
+final loss: -0.0305
+09/01/2025 22:53:19 - INFO - utils.data_utils -   final loss: -0.0305
+idx i:  1
+ratio: 1.00
+09/01/2025 22:53:36 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.1482
+09/01/2025 22:53:36 - INFO - utils.data_utils -   advantage -0.1482
+final loss: 0.0041
+09/01/2025 22:53:36 - INFO - utils.data_utils -   final loss: 0.0041
+idx i:  2
+ratio: 1.00
+09/01/2025 22:53:53 - INFO - utils.data_utils -   ratio: 1.00
+advantage -1.2869
+09/01/2025 22:53:53 - INFO - utils.data_utils -   advantage -1.2869
+final loss: 0.0357
+09/01/2025 22:53:53 - INFO - utils.data_utils -   final loss: 0.0357
+idx i:  3
+grad_norm_
+ratio: 1.00
+09/01/2025 22:54:11 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.3354
+09/01/2025 22:54:11 - INFO - utils.data_utils -   advantage 0.3354
+final loss: -0.0093
+09/01/2025 22:54:11 - INFO - utils.data_utils -   final loss: -0.0093
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:54:22 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:54:32 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:54:43 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:54:53 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2678, 0.2727, 0.2661, 0.2563, 0.2322, 0.2209, 0.2441, 0.2456, 0.2751,
+        0.2764, 0.2720, 0.2781, 0.3066, 0.3079, 0.3035, 0.3049, 0.2830, 0.2874,
+        0.2830, 0.2830, 0.3020, 0.2847, 0.2944, 0.2886, 0.2983, 0.2869, 0.2939,
+        0.2893], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 22:55:12 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.3025
+09/01/2025 22:55:12 - INFO - utils.data_utils -   advantage 0.3025
+final loss: -0.0084
+09/01/2025 22:55:12 - INFO - utils.data_utils -   final loss: -0.0084
+idx i:  1
+ratio: 1.00
+09/01/2025 22:55:29 - INFO - utils.data_utils -   ratio: 1.00
+advantage 1.0142
+09/01/2025 22:55:29 - INFO - utils.data_utils -   advantage 1.0142
+final loss: -0.0282
+09/01/2025 22:55:29 - INFO - utils.data_utils -   final loss: -0.0282
+idx i:  2
+ratio: 1.00
+09/01/2025 22:55:46 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.0534
+09/01/2025 22:55:46 - INFO - utils.data_utils -   advantage 0.0534
+final loss: -0.0015
+09/01/2025 22:55:46 - INFO - utils.data_utils -   final loss: -0.0015
+idx i:  3
+grad_norm_
+ratio: 1.00
+09/01/2025 22:56:04 - INFO - utils.data_utils -   ratio: 1.00
+advantage -1.3701
+09/01/2025 22:56:04 - INFO - utils.data_utils -   advantage -1.3701
+final loss: 0.0381
+09/01/2025 22:56:04 - INFO - utils.data_utils -   final loss: 0.0381
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:56:15 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:56:25 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:56:36 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:56:46 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2964, 0.2964, 0.3057, 0.2905, 0.2876, 0.2844, 0.2974, 0.2803, 0.3062,
+        0.3103, 0.3054, 0.3037, 0.2345, 0.2166, 0.2395, 0.2477, 0.2460, 0.2546,
+        0.2377, 0.2443, 0.2080, 0.2050, 0.2068, 0.2203, 0.2334, 0.2125, 0.2383,
+        0.2195], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 22:57:05 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.1365
+09/01/2025 22:57:05 - INFO - utils.data_utils -   advantage -0.1365
+final loss: 0.0038
+09/01/2025 22:57:05 - INFO - utils.data_utils -   final loss: 0.0038
+idx i:  1
+ratio: 1.00
+09/01/2025 22:57:22 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.1365
+09/01/2025 22:57:22 - INFO - utils.data_utils -   advantage -0.1365
+final loss: 0.0038
+09/01/2025 22:57:22 - INFO - utils.data_utils -   final loss: 0.0038
+idx i:  2
+ratio: 1.00
+09/01/2025 22:57:39 - INFO - utils.data_utils -   ratio: 1.00
+advantage 1.3460
+09/01/2025 22:57:39 - INFO - utils.data_utils -   advantage 1.3460
+final loss: -0.0374
+09/01/2025 22:57:39 - INFO - utils.data_utils -   final loss: -0.0374
+idx i:  3
+grad_norm_
+ratio: 1.00
+09/01/2025 22:57:57 - INFO - utils.data_utils -   ratio: 1.00
+advantage -1.0729
+09/01/2025 22:57:57 - INFO - utils.data_utils -   advantage -1.0729
+final loss: 0.0298
+09/01/2025 22:57:57 - INFO - utils.data_utils -   final loss: 0.0298
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:58:08 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:58:18 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:58:29 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 22:58:39 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2583, 0.2576, 0.2573, 0.2646, 0.2443, 0.2595, 0.2378, 0.2390, 0.3035,
+        0.3086, 0.3037, 0.2974, 0.2031, 0.1941, 0.2028, 0.2255, 0.1807, 0.2186,
+        0.1835, 0.1947, 0.3127, 0.3052, 0.3032, 0.3130, 0.3101, 0.3230, 0.3135,
+        0.3237], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 22:58:58 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.3329
+09/01/2025 22:58:58 - INFO - utils.data_utils -   advantage -0.3329
+final loss: 0.0092
+09/01/2025 22:58:58 - INFO - utils.data_utils -   final loss: 0.0092
+idx i:  1
+ratio: 1.00
+09/01/2025 22:59:15 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.5432
+09/01/2025 22:59:15 - INFO - utils.data_utils -   advantage -0.5432
+final loss: 0.0151
+09/01/2025 22:59:15 - INFO - utils.data_utils -   final loss: 0.0151
+idx i:  2
+ratio: 1.00
+09/01/2025 22:59:32 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.6132
+09/01/2025 22:59:32 - INFO - utils.data_utils -   advantage -0.6132
+final loss: 0.0170
+09/01/2025 22:59:32 - INFO - utils.data_utils -   final loss: 0.0170
+idx i:  3
+grad_norm_
+ratio: 1.00
+09/01/2025 22:59:50 - INFO - utils.data_utils -   ratio: 1.00
+advantage 1.4893
+09/01/2025 22:59:50 - INFO - utils.data_utils -   advantage 1.4893
+final loss: -0.0414
+09/01/2025 22:59:50 - INFO - utils.data_utils -   final loss: -0.0414
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:00:01 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:08<00:00,  1.81it/s]
+09/01/2025 23:00:10 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:08<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:00:21 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:00:31 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2993, 0.2974, 0.2979, 0.3044, 0.2207, 0.2100, 0.2241, 0.2162, 0.2435,
+        0.2539, 0.2401, 0.2515, 0.2246, 0.2318, 0.2219, 0.2484, 0.2681, 0.2656,
+        0.2600, 0.2642, 0.2269, 0.2183, 0.2363, 0.2362, 0.2554, 0.2247, 0.2474,
+        0.2292], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 23:00:50 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.1318
+09/01/2025 23:00:50 - INFO - utils.data_utils -   advantage -0.1318
+final loss: 0.0037
+09/01/2025 23:00:50 - INFO - utils.data_utils -   final loss: 0.0037
+idx i:  1
+ratio: 1.00
+09/01/2025 23:01:07 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.7344
+09/01/2025 23:01:07 - INFO - utils.data_utils -   advantage -0.7344
+final loss: 0.0204
+09/01/2025 23:01:07 - INFO - utils.data_utils -   final loss: 0.0204
+idx i:  2
+ratio: 1.00
+09/01/2025 23:01:24 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.5838
+09/01/2025 23:01:24 - INFO - utils.data_utils -   advantage -0.5838
+final loss: 0.0162
+09/01/2025 23:01:24 - INFO - utils.data_utils -   final loss: 0.0162
+idx i:  3
+grad_norm_
+ratio: 1.00
+09/01/2025 23:01:42 - INFO - utils.data_utils -   ratio: 1.00
+advantage 1.4500
+09/01/2025 23:01:42 - INFO - utils.data_utils -   advantage 1.4500
+final loss: -0.0403
+09/01/2025 23:01:42 - INFO - utils.data_utils -   final loss: -0.0403
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:01:53 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:02:03 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:02:14 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:02:24 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2317, 0.2375, 0.2302, 0.2391, 0.2625, 0.2556, 0.2646, 0.2637, 0.2585,
+        0.2668, 0.2454, 0.2473, 0.1826, 0.1970, 0.2026, 0.1927, 0.2390, 0.2379,
+        0.2366, 0.2390, 0.2900, 0.2612, 0.2734, 0.2786, 0.2668, 0.2671, 0.2625,
+        0.2742], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 23:02:43 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.6799
+09/01/2025 23:02:43 - INFO - utils.data_utils -   advantage -0.6799
+final loss: 0.0189
+09/01/2025 23:02:43 - INFO - utils.data_utils -   final loss: 0.0189
+idx i:  1
+ratio: 1.00
+09/01/2025 23:03:01 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.6658
+09/01/2025 23:03:01 - INFO - utils.data_utils -   advantage 0.6658
+final loss: -0.0185
+09/01/2025 23:03:01 - INFO - utils.data_utils -   final loss: -0.0185
+idx i:  2
+ratio: 1.00
+09/01/2025 23:03:18 - INFO - utils.data_utils -   ratio: 1.00
+advantage -1.0163
+09/01/2025 23:03:18 - INFO - utils.data_utils -   advantage -1.0163
+final loss: 0.0282
+09/01/2025 23:03:18 - INFO - utils.data_utils -   final loss: 0.0282
+idx i:  3
+grad_norm_
+ratio: 1.00
+09/01/2025 23:03:36 - INFO - utils.data_utils -   ratio: 1.00
+advantage 1.0303
+09/01/2025 23:03:36 - INFO - utils.data_utils -   advantage 1.0303
+final loss: -0.0286
+09/01/2025 23:03:36 - INFO - utils.data_utils -   final loss: -0.0286
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:03:47 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:03:57 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:04:08 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress:  75%|████████████████████████████████████████████████████████████████████████████████████████████████                                | 12/16 [00:07<00:02,  1.56it/s]
+Traceback (most recent call last):██████████████████████████████████████████████████████████████████████████████████████                                | 12/16 [00:07<00:02,  1.66it/s]
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1543, in <module>
+    args = parser.parse_args()
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1189, in main
+    dist.barrier()
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 791, in train_one_step
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 620, in sample_reference_model
+    with torch.no_grad():
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 456, in run_sample_step
+    pred = transformer(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py", line 565, in forward
+    hidden_states = block(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+    args, kwargs = _pre_forward(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+    unshard_fn(state, handle)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+    _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 299, in _unshard
+    event.synchronize()
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/cuda/streams.py", line 224, in synchronize
+    super().synchronize()
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1543, in <module>
+[rank0]:     args = parser.parse_args()
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1189, in main
+[rank0]:     dist.barrier()
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 791, in train_one_step
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 620, in sample_reference_model
+[rank0]:     with torch.no_grad():
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 456, in run_sample_step
+[rank0]:     pred = transformer(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py", line 565, in forward
+[rank0]:     hidden_states = block(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank0]:     args, kwargs = _pre_forward(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank0]:     unshard_fn(state, handle)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank0]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 299, in _unshard
+[rank0]:     event.synchronize()
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/cuda/streams.py", line 224, in synchronize
+[rank0]:     super().synchronize()
+[rank0]: KeyboardInterrupt

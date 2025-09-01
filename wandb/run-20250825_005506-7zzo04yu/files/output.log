@@ -1,0 +1,65 @@
+***** Running training *****
+08/25/2025 00:55:07 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1500
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Dataloader size = 1500
+  Resume training from step 0
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 32.0
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 32.0
+  Gradient Accumulation steps = 4
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.491297992 B
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.491297992 B
+  Master weight dtype: torch.bfloat16
+08/25/2025 00:55:07 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:14<00:00,  1.07it/s]
+08/25/2025 00:55:23 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:14<00:00,  1.53it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.53it/s]
+08/25/2025 00:55:34 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.54it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.53it/s]
+08/25/2025 00:55:45 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.54it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.53it/s]
+08/25/2025 00:55:57 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.54it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.0682, 0.0703, 0.0709, 0.0691, 0.0233, 0.0217, 0.0273, 0.0265, 0.0626,
+        0.0587, 0.0579, 0.0563, 0.0256, 0.0246, 0.0237, 0.0278, 0.0771, 0.0797,
+        0.0796, 0.0760, 0.0210, 0.0191, 0.0198, 0.0181, 0.0749, 0.0777, 0.0779,
+        0.0783, 0.0776, 0.0764, 0.0772, 0.0825], device='cuda:0')}
+samples['latents'].shape:  torch.Size([4, 15, 2704, 64])
+samples['timesteps'].shape:  torch.Size([4, 15])
+samples['next_latents'].shape:  torch.Size([4, 15, 2704, 64])
+samples['encoder_hidden_states'].shape:  torch.Size([4, 512, 4096])
+samples['pooled_prompt_embeds'].shape:  torch.Size([4, 768])
+samples['image_ids'].shape:  torch.Size([4, 2704, 3])
+samples['condition_latents'].shape:  torch.Size([4, 1, 3072, 64])
+samples['condition_ids'].shape:  torch.Size([4, 3072, 3])
+samples['text_ids'].shape:  torch.Size([4, 3])
+samples['final_advantages'].shape:  torch.Size([4])
+err:  'dict' object has no attribute 'unsqueeze'
+k  advantages
+len samples_batched_list:  4
+Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1463, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1109, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 877, in train_one_step
+    sample["final_advantages"],
+KeyError: 'final_advantages'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1463, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1109, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 877, in train_one_step
+[rank0]:     sample["final_advantages"],
+[rank0]: KeyError: 'final_advantages'

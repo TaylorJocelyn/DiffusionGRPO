@@ -1,0 +1,98 @@
+***** Running training *****
+08/23/2025 04:14:33 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 11995
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Dataloader size = 11995
+  Resume training from step 0
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 12.0
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 12.0
+  Gradient Accumulation steps = 12
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Gradient Accumulation steps = 12
+  Total optimization steps per epoch = 300
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 0.028975616 B
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 0.028975616 B
+  Master weight dtype: torch.bfloat16
+08/23/2025 04:14:33 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:26<00:00,  1.65s/it]
+08/23/2025 04:15:00 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:26<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:15:27 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:15:53 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:16:19 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:16:46 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:17:12 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:17:39 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:18:05 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:18:31 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:18:58 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:19:24 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.61s/it]
+08/23/2025 04:19:51 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:25<00:00,  1.62s/it]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.1985, 0.1970, 0.2034, 0.2013, 0.2081, 0.1979, 0.2098, 0.2056, 0.2091,
+        0.2076, 0.2072, 0.1954], device='cuda:0')}
+Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1343, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 988, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 755, in train_one_step
+    new_log_probs = grpo_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 352, in grpo_one_step
+    pred = tranformer_forward(
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer.py", line 209, in tranformer_forward
+    result = single_block_forward(
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 329, in single_block_forward
+    condition_latents = cond_gate * self.proj_out(condition_latents)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/peft/tuners/lora/layer.py", line 569, in forward
+    result = result + lora_B(lora_A(dropout(x))) * scaling
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 18.00 MiB. GPU 0 has a total capacity of 95.07 GiB of which 5.62 MiB is free. Including non-PyTorch memory, this process has 95.06 GiB memory in use. Of the allocated memory 93.09 GiB is allocated by PyTorch, and 1.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1343, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 988, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 755, in train_one_step
+[rank0]:     new_log_probs = grpo_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 352, in grpo_one_step
+[rank0]:     pred = tranformer_forward(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer.py", line 209, in tranformer_forward
+[rank0]:     result = single_block_forward(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 329, in single_block_forward
+[rank0]:     condition_latents = cond_gate * self.proj_out(condition_latents)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/peft/tuners/lora/layer.py", line 569, in forward
+[rank0]:     result = result + lora_B(lora_A(dropout(x))) * scaling
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 18.00 MiB. GPU 0 has a total capacity of 95.07 GiB of which 5.62 MiB is free. Including non-PyTorch memory, this process has 95.06 GiB memory in use. Of the allocated memory 93.09 GiB is allocated by PyTorch, and 1.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

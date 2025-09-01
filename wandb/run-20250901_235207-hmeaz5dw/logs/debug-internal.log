@@ -1,0 +1,6 @@
+{"time":"2025-09-01T23:52:08.032818259+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-09-01T23:52:08.635568132+08:00","level":"INFO","msg":"stream: created new stream","id":"hmeaz5dw"}
+{"time":"2025-09-01T23:52:08.635613962+08:00","level":"INFO","msg":"stream: started","id":"hmeaz5dw"}
+{"time":"2025-09-01T23:52:08.635637412+08:00","level":"INFO","msg":"sender: started","stream_id":"hmeaz5dw"}
+{"time":"2025-09-01T23:52:08.635640532+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"hmeaz5dw"}
+{"time":"2025-09-01T23:52:08.635653231+08:00","level":"INFO","msg":"handler: started","stream_id":"hmeaz5dw"}

@@ -1,0 +1,151 @@
+***** Running training *****
+09/01/2025 23:33:50 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1714
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Dataloader size = 1714
+  Resume training from step 0
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 28.0
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 28.0
+  Gradient Accumulation steps = 4
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.700201222 B
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.700201222 B
+  Master weight dtype: torch.bfloat16
+09/01/2025 23:33:50 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:13<00:00,  1.18it/s]
+09/01/2025 23:34:04 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:13<00:00,  1.64it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.61it/s]
+09/01/2025 23:34:16 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:34:26 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:34:36 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2505, 0.2407, 0.2318, 0.2445, 0.2290, 0.2327, 0.2258, 0.2260, 0.2681,
+        0.2852, 0.2830, 0.2900, 0.2817, 0.2815, 0.2874, 0.2837, 0.2834, 0.2888,
+        0.2773, 0.2822, 0.2639, 0.2786, 0.2617, 0.2668, 0.2910, 0.2808, 0.3000,
+        0.2847], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 23:34:59 - INFO - utils.data_utils -   ratio: 1.00
+advantage 1.0997
+09/01/2025 23:34:59 - INFO - utils.data_utils -   advantage 1.0997
+final loss: -0.0305
+09/01/2025 23:34:59 - INFO - utils.data_utils -   final loss: -0.0305
+idx i:  1
+ratio: 1.00
+09/01/2025 23:35:22 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.1482
+09/01/2025 23:35:22 - INFO - utils.data_utils -   advantage -0.1482
+final loss: 0.0041
+09/01/2025 23:35:22 - INFO - utils.data_utils -   final loss: 0.0041
+idx i:  2
+ratio: 1.00
+09/01/2025 23:35:45 - INFO - utils.data_utils -   ratio: 1.00
+advantage -1.2869
+09/01/2025 23:35:45 - INFO - utils.data_utils -   advantage -1.2869
+final loss: 0.0357
+09/01/2025 23:35:45 - INFO - utils.data_utils -   final loss: 0.0357
+idx i:  3
+grad_norm_
+ratio: 1.00
+09/01/2025 23:36:08 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.3354
+09/01/2025 23:36:08 - INFO - utils.data_utils -   advantage 0.3354
+final loss: -0.0093
+09/01/2025 23:36:08 - INFO - utils.data_utils -   final loss: -0.0093
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:36:18 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:36:28 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.65it/s]
+09/01/2025 23:36:39 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:09<00:00,  1.66it/s]
+--> decode image and save to log dir...
+Sampling Progress:  25%|████████████████████████████████▎                                                                                                | 4/16 [00:02<00:08,  1.46it/s]
+Traceback (most recent call last):██████████████████████▎                                                                                                | 4/16 [00:02<00:07,  1.64it/s]
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1543, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1189, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 791, in train_one_step
+    rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 620, in sample_reference_model
+    z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 456, in run_sample_step
+    # pred = transformer(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py", line 565, in forward
+    hidden_states = block(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+    args, kwargs = _pre_forward(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+    unshard_fn(state, handle)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+    _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 299, in _unshard
+    event.synchronize()
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/cuda/streams.py", line 224, in synchronize
+    super().synchronize()
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1543, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1189, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 791, in train_one_step
+[rank0]:     rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 620, in sample_reference_model
+[rank0]:     z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 456, in run_sample_step
+[rank0]:     # pred = transformer(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/transformers/transformer_flux.py", line 565, in forward
+[rank0]:     hidden_states = block(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank0]:     args, kwargs = _pre_forward(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank0]:     unshard_fn(state, handle)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank0]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 299, in _unshard
+[rank0]:     event.synchronize()
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/cuda/streams.py", line 224, in synchronize
+[rank0]:     super().synchronize()
+[rank0]: KeyboardInterrupt

@@ -1,0 +1,217 @@
+***** Running training *****
+08/24/2025 21:54:10 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1999
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Dataloader size = 1999
+  Resume training from step 0
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 2
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Instantaneous batch size per device = 2
+  Total train batch size (w. data & sequence parallel, accumulation) = 24.0
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 24.0
+  Gradient Accumulation steps = 2
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Gradient Accumulation steps = 2
+  Total optimization steps per epoch = 300
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 3.976794677 B
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 3.976794677 B
+  Master weight dtype: torch.bfloat16
+08/24/2025 21:54:10 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Steps:   0%|                                                                                                                                                 | 0/100000 [00:00<?, ?it/s]
+Sampling Progress:   5%|██████▍                                                                                                                          | 1/20 [00:03<01:04,  3.38s/it]
+__ hidden_states shape:  torch.Size([1, 4096, 64])
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+__ hidden_states shape:  torch.Size([1, 4096, 64])
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+__ hidden_states shape:  torch.Size([1, 4096, 64])
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+__ hidden_states shape:  torch.Size([1, 4096, 64])
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+__ hidden_states shape:  torch.Size([1, 4096, 64])
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+__ hidden_states shape:  torch.Size([1, 4096, 64])
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+block_forward
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1439, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1084, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 715, in train_one_step
+    rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 543, in sample_reference_model
+    z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 357, in run_sample_step
+    pred = transformer(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer_.py", line 209, in tranformer_forward
+    result = block(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+    args, kwargs = _pre_forward(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+    unshard_fn(state, handle)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+    _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 299, in _unshard
+    event.synchronize()
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/cuda/streams.py", line 224, in synchronize
+    super().synchronize()
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1439, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1084, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 715, in train_one_step
+[rank0]:     rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 543, in sample_reference_model
+[rank0]:     z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 357, in run_sample_step
+[rank0]:     pred = transformer(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer_.py", line 209, in tranformer_forward
+[rank0]:     result = block(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank0]:     args, kwargs = _pre_forward(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank0]:     unshard_fn(state, handle)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank0]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 299, in _unshard
+[rank0]:     event.synchronize()
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/cuda/streams.py", line 224, in synchronize
+[rank0]:     super().synchronize()
+[rank0]: KeyboardInterrupt

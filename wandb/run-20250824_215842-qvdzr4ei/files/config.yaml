@@ -1,0 +1,141 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 11
+                - 41
+                - 49
+                - 51
+                - 63
+                - 71
+                - 83
+                - 95
+                - 98
+                - 105
+            "3":
+                - 16
+            "4": 3.10.18
+            "5": 0.21.0
+            "6": 4.55.4
+            "12": 0.21.0
+            "13": linux-x86_64
+adv_clip_max:
+    value: 5
+allow_tf32:
+    value: true
+cache_dir:
+    value: /root/autodl-tmp/.cache/hub
+cfg:
+    value: 0
+checkpointing_steps:
+    value: 40
+clip_range:
+    value: 0.0001
+data_json_path:
+    value: /root/autodl-tmp/DiffusionGRPO/data/rl_embeddings/txt2img.json
+dataloader_num_workers:
+    value: 4
+dit_model_name_or_path:
+    value: null
+ema_decay:
+    value: 0.995
+ema_start_step:
+    value: 0
+eta:
+    value: 0.3
+fsdp_sharding_startegy:
+    value: full
+gradient_accumulation_steps:
+    value: 2
+gradient_checkpointing:
+    value: true
+h:
+    value: 1024
+ignore_last:
+    value: true
+init_same_noise:
+    value: true
+learning_rate:
+    value: 1e-05
+log_dir:
+    value: runs
+logging_dir:
+    value: logs
+loss_coef:
+    value: 1
+lr_num_cycles:
+    value: 1
+lr_power:
+    value: 1
+lr_scheduler:
+    value: constant_with_warmup
+lr_warmup_steps:
+    value: 0
+master_weight_type:
+    value: fp32
+max_grad_norm:
+    value: 1
+max_train_steps:
+    value: 300
+mixed_precision:
+    value: bf16
+num_generations:
+    value: 2
+num_latent_t:
+    value: 1
+output_dir:
+    value: /root/autodl-tmp/DiffusionGRPO/data/outputs/grpo
+precondition_outputs:
+    value: false
+pretrained_model_name_or_path:
+    value: /root/autodl-tmp/.cache/hub/models--black-forest-labs--FLUX.1-dev/snapshots/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21
+resume_from_checkpoint:
+    value: null
+sampler_seed:
+    value: 1223627
+sampling_steps:
+    value: 20
+seed:
+    value: 42
+selective_checkpointing:
+    value: 1
+shift:
+    value: 3
+sp_size:
+    value: 1
+t:
+    value: 1
+timestep_fraction:
+    value: 0.6
+train_batch_size:
+    value: 2
+train_sp_batch_size:
+    value: 2
+use_aesthetics_reward:
+    value: true
+use_cpu_offload:
+    value: false
+use_ctr_reward:
+    value: false
+use_ecp_reward:
+    value: false
+use_group:
+    value: true
+use_hpsv2:
+    value: true
+use_pickscore:
+    value: false
+use_t2i_align_reward:
+    value: false
+vae_model_path:
+    value: /root/autodl-tmp/.cache/hub/models--black-forest-labs--FLUX.1-dev/snapshots/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21
+w:
+    value: 1024
+weight_decay:
+    value: 0.0001

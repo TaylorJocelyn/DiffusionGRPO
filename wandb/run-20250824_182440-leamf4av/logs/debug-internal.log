@@ -1,0 +1,7 @@
+{"time":"2025-08-24T18:24:41.168599573+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-24T18:24:41.734186665+08:00","level":"INFO","msg":"stream: created new stream","id":"leamf4av"}
+{"time":"2025-08-24T18:24:41.734226804+08:00","level":"INFO","msg":"stream: started","id":"leamf4av"}
+{"time":"2025-08-24T18:24:41.734240874+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"leamf4av"}
+{"time":"2025-08-24T18:24:41.734259274+08:00","level":"INFO","msg":"sender: started","stream_id":"leamf4av"}
+{"time":"2025-08-24T18:24:41.734284214+08:00","level":"INFO","msg":"handler: started","stream_id":"leamf4av"}
+{"time":"2025-08-24T18:24:43.611147583+08:00","level":"INFO","msg":"stream: closing","id":"leamf4av"}

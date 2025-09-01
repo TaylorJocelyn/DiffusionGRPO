@@ -1,0 +1,17 @@
+{"time":"2025-09-01T00:05:29.491868821+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-09-01T00:05:29.60872254+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-09-01T00:05:31.737470265+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-09-01T00:05:36.271041269+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-09-01T00:05:44.708253258+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-09-01T00:06:01.52768157+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-09-01T00:06:38.635476129+08:00","level":"INFO","msg":"stream: created new stream","id":"bpijppfn"}
+{"time":"2025-09-01T00:06:38.635541958+08:00","level":"INFO","msg":"stream: started","id":"bpijppfn"}
+{"time":"2025-09-01T00:06:38.635565838+08:00","level":"INFO","msg":"handler: started","stream_id":"bpijppfn"}
+{"time":"2025-09-01T00:06:38.635568438+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"bpijppfn"}
+{"time":"2025-09-01T00:06:38.635598348+08:00","level":"INFO","msg":"sender: started","stream_id":"bpijppfn"}
+{"time":"2025-09-01T00:07:50.246898919+08:00","level":"INFO","msg":"stream: closing","id":"bpijppfn"}
+{"time":"2025-09-01T00:07:51.194394132+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-01T00:07:51.721870573+08:00","level":"INFO","msg":"handler: closed","stream_id":"bpijppfn"}
+{"time":"2025-09-01T00:07:51.721942142+08:00","level":"INFO","msg":"sender: closed","stream_id":"bpijppfn"}
+{"time":"2025-09-01T00:07:51.721939842+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bpijppfn"}
+{"time":"2025-09-01T00:07:51.722043371+08:00","level":"INFO","msg":"stream: closed","id":"bpijppfn"}

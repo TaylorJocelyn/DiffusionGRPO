@@ -1,0 +1,52 @@
+***** Running training *****
+08/25/2025 00:25:04 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1500
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Dataloader size = 1500
+  Resume training from step 0
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 96.0
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 96.0
+  Gradient Accumulation steps = 12
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Gradient Accumulation steps = 12
+  Total optimization steps per epoch = 300
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.491297992 B
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.491297992 B
+  Master weight dtype: torch.bfloat16
+08/25/2025 00:25:04 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:16<00:00,  1.03s/it]
+08/25/2025 00:25:21 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:16<00:00,  1.52it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.52it/s]
+Traceback (most recent call last):██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.54it/s]
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1444, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1090, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 712, in train_one_step
+    rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 576, in sample_reference_model
+    decoded_image = image_processor.postprocess(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/image_processor.py", line 780, in postprocess
+    image = self.pt_to_numpy(image)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/image_processor.py", line 208, in pt_to_numpy
+    images = images.cpu().permute(0, 2, 3, 1).float().numpy()
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1444, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1090, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 712, in train_one_step
+[rank0]:     rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 576, in sample_reference_model
+[rank0]:     decoded_image = image_processor.postprocess(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/image_processor.py", line 780, in postprocess
+[rank0]:     image = self.pt_to_numpy(image)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/image_processor.py", line 208, in pt_to_numpy
+[rank0]:     images = images.cpu().permute(0, 2, 3, 1).float().numpy()
+[rank0]: KeyboardInterrupt

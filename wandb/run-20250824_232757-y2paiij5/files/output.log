@@ -1,0 +1,733 @@
+***** Running training *****
+08/24/2025 23:27:59 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1500
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Dataloader size = 1500
+  Resume training from step 0
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 16.0
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 16.0
+  Gradient Accumulation steps = 2
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Gradient Accumulation steps = 2
+  Total optimization steps per epoch = 300
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.491297992 B
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.491297992 B
+  Master weight dtype: torch.bfloat16
+08/24/2025 23:27:59 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Steps:   0%|                                                                                                                                                 | 0/100000 [00:00<?, ?it/s]
+Sampling Progress:   0%|                                                                                                                                         | 0/16 [00:00<?, ?it/s]
+pipeline.image_processor  <class 'diffusers.image_processor.VaeImageProcessor'>
+vae  AutoencoderKL(
+  (encoder): Encoder(
+    (conv_in): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (down_blocks): ModuleList(
+      (0): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0-1): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (1): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (2): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (3): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0-1): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+      )
+    )
+    (mid_block): UNetMidBlock2D(
+      (attentions): ModuleList(
+        (0): Attention(
+          (group_norm): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (to_q): Linear(in_features=512, out_features=512, bias=True)
+          (to_k): Linear(in_features=512, out_features=512, bias=True)
+          (to_v): Linear(in_features=512, out_features=512, bias=True)
+          (to_out): ModuleList(
+            (0): Linear(in_features=512, out_features=512, bias=True)
+            (1): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (resnets): ModuleList(
+        (0-1): 2 x ResnetBlock2D(
+          (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (nonlinearity): SiLU()
+        )
+      )
+    )
+    (conv_norm_out): GroupNorm(32, 512, eps=1e-06, affine=True)
+    (conv_act): SiLU()
+    (conv_out): Conv2d(512, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (decoder): Decoder(
+    (conv_in): Conv2d(16, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (up_blocks): ModuleList(
+      (0-1): 2 x UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0-2): 3 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (upsamplers): ModuleList(
+          (0): Upsample2D(
+            (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+      )
+      (2): UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1-2): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (upsamplers): ModuleList(
+          (0): Upsample2D(
+            (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+      )
+      (3): UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1-2): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+      )
+    )
+    (mid_block): UNetMidBlock2D(
+      (attentions): ModuleList(
+        (0): Attention(
+          (group_norm): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (to_q): Linear(in_features=512, out_features=512, bias=True)
+          (to_k): Linear(in_features=512, out_features=512, bias=True)
+          (to_v): Linear(in_features=512, out_features=512, bias=True)
+          (to_out): ModuleList(
+            (0): Linear(in_features=512, out_features=512, bias=True)
+            (1): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (resnets): ModuleList(
+        (0-1): 2 x ResnetBlock2D(
+          (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (nonlinearity): SiLU()
+        )
+      )
+    )
+    (conv_norm_out): GroupNorm(32, 128, eps=1e-06, affine=True)
+    (conv_act): SiLU()
+    (conv_out): Conv2d(128, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+pipeline.image_processor  <class 'diffusers.image_processor.VaeImageProcessor'>
+vae  AutoencoderKL(
+  (encoder): Encoder(
+    (conv_in): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (down_blocks): ModuleList(
+      (0): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0-1): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (1): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (2): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (3): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0-1): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+      )
+    )
+    (mid_block): UNetMidBlock2D(
+      (attentions): ModuleList(
+        (0): Attention(
+          (group_norm): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (to_q): Linear(in_features=512, out_features=512, bias=True)
+          (to_k): Linear(in_features=512, out_features=512, bias=True)
+          (to_v): Linear(in_features=512, out_features=512, bias=True)
+          (to_out): ModuleList(
+            (0): Linear(in_features=512, out_features=512, bias=True)
+            (1): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (resnets): ModuleList(
+        (0-1): 2 x ResnetBlock2D(
+          (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (nonlinearity): SiLU()
+        )
+      )
+    )
+    (conv_norm_out): GroupNorm(32, 512, eps=1e-06, affine=True)
+    (conv_act): SiLU()
+    (conv_out): Conv2d(512, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (decoder): Decoder(
+    (conv_in): Conv2d(16, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (up_blocks): ModuleList(
+      (0-1): 2 x UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0-2): 3 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (upsamplers): ModuleList(
+          (0): Upsample2D(
+            (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+      )
+      (2): UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1-2): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (upsamplers): ModuleList(
+          (0): Upsample2D(
+            (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+      )
+      (3): UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1-2): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+      )
+    )
+    (mid_block): UNetMidBlock2D(
+      (attentions): ModuleList(
+        (0): Attention(
+          (group_norm): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (to_q): Linear(in_features=512, out_features=512, bias=True)
+          (to_k): Linear(in_features=512, out_features=512, bias=True)
+          (to_v): Linear(in_features=512, out_features=512, bias=True)
+          (to_out): ModuleList(
+            (0): Linear(in_features=512, out_features=512, bias=True)
+            (1): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (resnets): ModuleList(
+        (0-1): 2 x ResnetBlock2D(
+          (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (nonlinearity): SiLU()
+        )
+      )
+    )
+    (conv_norm_out): GroupNorm(32, 128, eps=1e-06, affine=True)
+    (conv_act): SiLU()
+    (conv_out): Conv2d(128, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+pipeline.image_processor  <class 'diffusers.image_processor.VaeImageProcessor'>
+vae  AutoencoderKL(
+  (encoder): Encoder(
+    (conv_in): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (down_blocks): ModuleList(
+      (0): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0-1): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (1): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (2): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (downsamplers): ModuleList(
+          (0): Downsample2D(
+            (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2))
+          )
+        )
+      )
+      (3): DownEncoderBlock2D(
+        (resnets): ModuleList(
+          (0-1): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+      )
+    )
+    (mid_block): UNetMidBlock2D(
+      (attentions): ModuleList(
+        (0): Attention(
+          (group_norm): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (to_q): Linear(in_features=512, out_features=512, bias=True)
+          (to_k): Linear(in_features=512, out_features=512, bias=True)
+          (to_v): Linear(in_features=512, out_features=512, bias=True)
+          (to_out): ModuleList(
+            (0): Linear(in_features=512, out_features=512, bias=True)
+            (1): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (resnets): ModuleList(
+        (0-1): 2 x ResnetBlock2D(
+          (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (nonlinearity): SiLU()
+        )
+      )
+    )
+    (conv_norm_out): GroupNorm(32, 512, eps=1e-06, affine=True)
+    (conv_act): SiLU()
+    (conv_out): Conv2d(512, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (decoder): Decoder(
+    (conv_in): Conv2d(16, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (up_blocks): ModuleList(
+      (0-1): 2 x UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0-2): 3 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (upsamplers): ModuleList(
+          (0): Upsample2D(
+            (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+      )
+      (2): UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+            (conv1): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1-2): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+        (upsamplers): ModuleList(
+          (0): Upsample2D(
+            (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          )
+        )
+      )
+      (3): UpDecoderBlock2D(
+        (resnets): ModuleList(
+          (0): ResnetBlock2D(
+            (norm1): GroupNorm(32, 256, eps=1e-06, affine=True)
+            (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+            (conv_shortcut): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1-2): 2 x ResnetBlock2D(
+            (norm1): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (norm2): GroupNorm(32, 128, eps=1e-06, affine=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (nonlinearity): SiLU()
+          )
+        )
+      )
+    )
+    (mid_block): UNetMidBlock2D(
+      (attentions): ModuleList(
+        (0): Attention(
+          (group_norm): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (to_q): Linear(in_features=512, out_features=512, bias=True)
+          (to_k): Linear(in_features=512, out_features=512, bias=True)
+          (to_v): Linear(in_features=512, out_features=512, bias=True)
+          (to_out): ModuleList(
+            (0): Linear(in_features=512, out_features=512, bias=True)
+            (1): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (resnets): ModuleList(
+        (0-1): 2 x ResnetBlock2D(
+          (norm1): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (norm2): GroupNorm(32, 512, eps=1e-06, affine=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+          (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (nonlinearity): SiLU()
+        )
+      )
+    )
+    (conv_norm_out): GroupNorm(32, 128, eps=1e-06, affine=True)
+    (conv_act): SiLU()
+    (conv_out): Conv2d(128, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1447, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1092, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 717, in train_one_step
+    rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 545, in sample_reference_model
+    z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 359, in run_sample_step
+    pred = transformer(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer_.py", line 209, in tranformer_forward
+    result = block(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+    args, kwargs = _pre_forward(
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+    unshard_fn(state, handle)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+    _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 299, in _unshard
+    event.synchronize()
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/cuda/streams.py", line 224, in synchronize
+    super().synchronize()
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1447, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1092, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 717, in train_one_step
+[rank0]:     rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 545, in sample_reference_model
+[rank0]:     z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 359, in run_sample_step
+[rank0]:     pred = transformer(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 864, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer_.py", line 209, in tranformer_forward
+[rank0]:     result = block(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 850, in forward
+[rank0]:     args, kwargs = _pre_forward(
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 382, in _pre_forward
+[rank0]:     unshard_fn(state, handle)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 417, in _pre_forward_unshard
+[rank0]:     _unshard(state, handle, state._unshard_stream, state._pre_unshard_stream)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/distributed/fsdp/_runtime_utils.py", line 299, in _unshard
+[rank0]:     event.synchronize()
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/cuda/streams.py", line 224, in synchronize
+[rank0]:     super().synchronize()
+[rank0]: KeyboardInterrupt

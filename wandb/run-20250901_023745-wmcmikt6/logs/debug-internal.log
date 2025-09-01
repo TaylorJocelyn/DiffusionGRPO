@@ -1,0 +1,6 @@
+{"time":"2025-09-01T02:37:45.517296199+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-09-01T02:37:46.464027777+08:00","level":"INFO","msg":"stream: created new stream","id":"wmcmikt6"}
+{"time":"2025-09-01T02:37:46.464079656+08:00","level":"INFO","msg":"stream: started","id":"wmcmikt6"}
+{"time":"2025-09-01T02:37:46.464094056+08:00","level":"INFO","msg":"sender: started","stream_id":"wmcmikt6"}
+{"time":"2025-09-01T02:37:46.464095306+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"wmcmikt6"}
+{"time":"2025-09-01T02:37:46.464110216+08:00","level":"INFO","msg":"handler: started","stream_id":"wmcmikt6"}

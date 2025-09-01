@@ -1,0 +1,151 @@
+***** Running training *****
+08/24/2025 21:10:58 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1999
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Dataloader size = 1999
+  Resume training from step 0
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 2
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Instantaneous batch size per device = 2
+  Total train batch size (w. data & sequence parallel, accumulation) = 24.0
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 24.0
+  Gradient Accumulation steps = 2
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Gradient Accumulation steps = 2
+  Total optimization steps per epoch = 300
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 0.028975616 B
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 0.028975616 B
+  Master weight dtype: torch.bfloat16
+08/24/2025 21:10:58 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:32<00:00,  1.63s/it]
+08/24/2025 21:11:31 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 20/20 [00:32<00:00,  1.61s/it]
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:32<00:00,  1.61s/it]
+08/24/2025 21:12:04 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 20/20 [00:32<00:00,  1.61s/it]
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:32<00:00,  1.61s/it]
+08/24/2025 21:12:37 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 20/20 [00:32<00:00,  1.61s/it]
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:32<00:00,  1.61s/it]
+08/24/2025 21:13:10 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 20/20 [00:32<00:00,  1.61s/it]
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+hidden_states shape:  torch.Size([1, 4096, 64])
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.2063, 0.2026, 0.1993, 0.2007, 0.1798, 0.1761, 0.2756, 0.2798, 0.2408,
+        0.2394, 0.1895, 0.2041], device='cuda:0')}
+hidden_states shape:  torch.Size([1, 4096, 64])
+Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1431, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1076, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 836, in train_one_step
+    new_log_probs = grpo_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 418, in grpo_one_step
+    pred = tranformer_forward(
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer.py", line 210, in tranformer_forward
+    result = single_block_forward(
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 304, in single_block_forward
+    attn_output = attn_forward(
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 100, in attn_forward
+    cond_query = apply_rotary_emb(cond_query, cond_rotary_emb)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/embeddings.py", line 1208, in apply_rotary_emb
+    out = (x.float() * cos + x_rotated.float() * sin).to(x.dtype)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 36.00 MiB. GPU 0 has a total capacity of 95.07 GiB of which 15.56 MiB is free. Including non-PyTorch memory, this process has 95.05 GiB memory in use. Of the allocated memory 91.65 GiB is allocated by PyTorch, and 1.31 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1431, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1076, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 836, in train_one_step
+[rank0]:     new_log_probs = grpo_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 418, in grpo_one_step
+[rank0]:     pred = tranformer_forward(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer.py", line 210, in tranformer_forward
+[rank0]:     result = single_block_forward(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 304, in single_block_forward
+[rank0]:     attn_output = attn_forward(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/block.py", line 100, in attn_forward
+[rank0]:     cond_query = apply_rotary_emb(cond_query, cond_rotary_emb)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/diffusers/models/embeddings.py", line 1208, in apply_rotary_emb
+[rank0]:     out = (x.float() * cos + x_rotated.float() * sin).to(x.dtype)
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 36.00 MiB. GPU 0 has a total capacity of 95.07 GiB of which 15.56 MiB is free. Including non-PyTorch memory, this process has 95.05 GiB memory in use. Of the allocated memory 91.65 GiB is allocated by PyTorch, and 1.31 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

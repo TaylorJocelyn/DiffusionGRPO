@@ -1,0 +1,289 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            9a21v924znb24z92j4r2nay7tucwxseb:
+                args:
+                    - --seed
+                    - "42"
+                    - --pretrained_model_name_or_path
+                    - /root/autodl-tmp/.cache/hub/models--black-forest-labs--FLUX.1-dev/snapshots/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21
+                    - --vae_model_path
+                    - /root/autodl-tmp/.cache/hub/models--black-forest-labs--FLUX.1-dev/snapshots/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21
+                    - --cache_dir
+                    - /root/autodl-tmp/.cache/hub
+                    - --data_json_path
+                    - /root/autodl-tmp/DiffusionGRPO/data/rl_embeddings/txt2img.json
+                    - --gradient_checkpointing
+                    - --train_batch_size
+                    - "1"
+                    - --num_latent_t
+                    - "1"
+                    - --sp_size
+                    - "1"
+                    - --train_sp_batch_size
+                    - "1"
+                    - --dataloader_num_workers
+                    - "4"
+                    - --gradient_accumulation_steps
+                    - "4"
+                    - --max_train_steps
+                    - "300"
+                    - --learning_rate
+                    - "1e-5"
+                    - --mixed_precision
+                    - bf16
+                    - --checkpointing_steps
+                    - "40"
+                    - --allow_tf32
+                    - --cfg
+                    - "0.0"
+                    - --output_dir
+                    - /root/autodl-tmp/DiffusionGRPO/data/outputs/grpo
+                    - --h
+                    - "832"
+                    - --w
+                    - "832"
+                    - --t
+                    - "1"
+                    - --sampling_steps
+                    - "16"
+                    - --eta
+                    - "0.3"
+                    - --lr_warmup_steps
+                    - "0"
+                    - --sampler_seed
+                    - "1223627"
+                    - --max_grad_norm
+                    - "1.0"
+                    - --weight_decay
+                    - "0.0001"
+                    - --use_hpsv2
+                    - --num_generations
+                    - "4"
+                    - --shift
+                    - "3"
+                    - --use_group
+                    - --ignore_last
+                    - --timestep_fraction
+                    - "0.6"
+                    - --init_same_noise
+                    - --clip_range
+                    - "1e-4"
+                    - --adv_clip_max
+                    - "5.0"
+                    - --use_aesthetics_reward
+                codePath: src/train_grpo_flux.py
+                codePathLocal: src/train_grpo_flux.py
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "32212254720"
+                        used: "15572127744"
+                email: 22351033@zju.edu.cn
+                executable: /root/miniconda3/envs/aigc_rl/bin/python3.10
+                git:
+                    commit: cafe04603f787af48f7a7c59b1036e1df247f93b
+                    remote: https://github.com/TaylorJocelyn/DiffusionGRPO.git
+                gpu: NVIDIA H20
+                gpu_count: 7
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-8607489a-1031-37c7-0066-42525a7cc443
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-802ccf1a-3246-8cb1-8b61-5df46a763fa6
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-10c3c23f-941d-6fdb-03c9-7b482e9d0e86
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-7dd0df62-bf01-e2fd-dcbd-c559176457e3
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-f6715569-9379-9970-c8cb-ddc163ee7576
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-85eadff3-08c0-a7d1-d2af-e74bb8dd4978
+                    - architecture: Hopper
+                      cudaCores: 9984
+                      memoryTotal: "102625181696"
+                      name: NVIDIA H20
+                      uuid: GPU-6717699e-3ac0-efd1-4cc1-92e07028ec01
+                host: autodl-container-b31545909a-7301ad6e
+                memory:
+                    total: "1330811777024"
+                os: Linux-5.15.0-130-generic-x86_64-with-glibc2.35
+                program: /root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py
+                python: CPython 3.10.18
+                root: /root/autodl-tmp/DiffusionGRPO
+                startedAt: "2025-09-01T14:52:12.787286Z"
+                writerId: 9a21v924znb24z92j4r2nay7tucwxseb
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 11
+                - 41
+                - 49
+                - 51
+                - 63
+                - 71
+                - 83
+                - 95
+                - 98
+                - 105
+            "2":
+                - 1
+                - 2
+                - 3
+                - 11
+                - 41
+                - 49
+                - 51
+                - 63
+                - 71
+                - 83
+                - 95
+                - 98
+                - 105
+            "3":
+                - 16
+                - 61
+            "4": 3.10.18
+            "5": 0.21.0
+            "6": 4.55.4
+            "12": 0.21.0
+            "13": linux-x86_64
+adv_clip_max:
+    value: 5
+allow_tf32:
+    value: true
+cache_dir:
+    value: /root/autodl-tmp/.cache/hub
+cfg:
+    value: 0
+checkpointing_steps:
+    value: 40
+clip_range:
+    value: 0.0001
+data_json_path:
+    value: /root/autodl-tmp/DiffusionGRPO/data/rl_embeddings/txt2img.json
+dataloader_num_workers:
+    value: 4
+dit_model_name_or_path:
+    value: null
+ema_decay:
+    value: 0.995
+ema_start_step:
+    value: 0
+eta:
+    value: 0.3
+fsdp_sharding_startegy:
+    value: full
+gradient_accumulation_steps:
+    value: 4
+gradient_checkpointing:
+    value: true
+h:
+    value: 832
+ignore_last:
+    value: true
+init_same_noise:
+    value: true
+learning_rate:
+    value: 1e-05
+log_dir:
+    value: runs
+logging_dir:
+    value: logs
+loss_coef:
+    value: 1
+lr_num_cycles:
+    value: 1
+lr_power:
+    value: 1
+lr_scheduler:
+    value: constant_with_warmup
+lr_warmup_steps:
+    value: 0
+master_weight_type:
+    value: fp32
+max_grad_norm:
+    value: 1
+max_train_steps:
+    value: 300
+mixed_precision:
+    value: bf16
+num_generations:
+    value: 4
+num_latent_t:
+    value: 1
+output_dir:
+    value: /root/autodl-tmp/DiffusionGRPO/data/outputs/grpo
+precondition_outputs:
+    value: false
+pretrained_model_name_or_path:
+    value: /root/autodl-tmp/.cache/hub/models--black-forest-labs--FLUX.1-dev/snapshots/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21
+resume_from_checkpoint:
+    value: null
+sampler_seed:
+    value: 1223627
+sampling_steps:
+    value: 16
+seed:
+    value: 42
+selective_checkpointing:
+    value: 1
+shift:
+    value: 3
+sp_size:
+    value: 1
+t:
+    value: 1
+timestep_fraction:
+    value: 0.6
+train_batch_size:
+    value: 1
+train_sp_batch_size:
+    value: 1
+use_aesthetics_reward:
+    value: true
+use_cpu_offload:
+    value: false
+use_ctr_reward:
+    value: false
+use_ecp_reward:
+    value: false
+use_group:
+    value: true
+use_hpsv2:
+    value: true
+use_pickscore:
+    value: false
+use_t2i_align_reward:
+    value: false
+vae_model_path:
+    value: /root/autodl-tmp/.cache/hub/models--black-forest-labs--FLUX.1-dev/snapshots/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21
+w:
+    value: 832
+weight_decay:
+    value: 0.0001

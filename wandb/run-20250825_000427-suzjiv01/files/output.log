@@ -1,0 +1,45 @@
+***** Running training *****
+08/25/2025 00:04:28 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1500
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Dataloader size = 1500
+  Resume training from step 0
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 16.0
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 16.0
+  Gradient Accumulation steps = 2
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Gradient Accumulation steps = 2
+  Total optimization steps per epoch = 300
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.491297992 B
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.491297992 B
+  Master weight dtype: torch.bfloat16
+08/25/2025 00:04:28 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:17<00:00,  1.12s/it]
+08/25/2025 00:04:47 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:17<00:00,  1.52it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.53it/s]
+08/25/2025 00:04:58 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.54it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.0682, 0.0703, 0.0233, 0.0217, 0.0626, 0.0587, 0.0256, 0.0246, 0.0771,
+        0.0797, 0.0210, 0.0191, 0.0749, 0.0777, 0.0776, 0.0764],
+       device='cuda:0')}
+Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1441, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1087, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 885, in train_one_step
+    main_print(f"ratio: {ratio.item():.2f}",)
+TypeError: main_print() missing 1 required positional argument: 'logger'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1441, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1087, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 885, in train_one_step
+[rank0]:     main_print(f"ratio: {ratio.item():.2f}",)
+[rank0]: TypeError: main_print() missing 1 required positional argument: 'logger'

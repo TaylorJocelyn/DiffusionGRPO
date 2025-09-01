@@ -1,0 +1,6 @@
+{"time":"2025-08-19T02:30:14.796657323+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-19T02:30:15.179609148+08:00","level":"INFO","msg":"stream: created new stream","id":"wj181qad"}
+{"time":"2025-08-19T02:30:15.179638642+08:00","level":"INFO","msg":"stream: started","id":"wj181qad"}
+{"time":"2025-08-19T02:30:15.179665585+08:00","level":"INFO","msg":"sender: started","stream_id":"wj181qad"}
+{"time":"2025-08-19T02:30:15.179661958+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"wj181qad"}
+{"time":"2025-08-19T02:30:15.17968167+08:00","level":"INFO","msg":"handler: started","stream_id":"wj181qad"}

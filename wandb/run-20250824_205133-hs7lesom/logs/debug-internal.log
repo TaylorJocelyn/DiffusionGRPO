@@ -1,0 +1,6 @@
+{"time":"2025-08-24T20:51:33.751742522+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-24T20:51:34.329336417+08:00","level":"INFO","msg":"stream: created new stream","id":"hs7lesom"}
+{"time":"2025-08-24T20:51:34.329384467+08:00","level":"INFO","msg":"stream: started","id":"hs7lesom"}
+{"time":"2025-08-24T20:51:34.329401337+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"hs7lesom"}
+{"time":"2025-08-24T20:51:34.329405246+08:00","level":"INFO","msg":"sender: started","stream_id":"hs7lesom"}
+{"time":"2025-08-24T20:51:34.329429336+08:00","level":"INFO","msg":"handler: started","stream_id":"hs7lesom"}

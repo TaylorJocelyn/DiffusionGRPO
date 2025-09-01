@@ -1,0 +1,6 @@
+{"time":"2025-08-24T21:00:23.618419005+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-24T21:00:24.197189104+08:00","level":"INFO","msg":"stream: created new stream","id":"nwbuvbs9"}
+{"time":"2025-08-24T21:00:24.197233414+08:00","level":"INFO","msg":"stream: started","id":"nwbuvbs9"}
+{"time":"2025-08-24T21:00:24.197243893+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"nwbuvbs9"}
+{"time":"2025-08-24T21:00:24.197255373+08:00","level":"INFO","msg":"handler: started","stream_id":"nwbuvbs9"}
+{"time":"2025-08-24T21:00:24.197263523+08:00","level":"INFO","msg":"sender: started","stream_id":"nwbuvbs9"}

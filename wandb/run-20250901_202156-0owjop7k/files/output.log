@@ -1,0 +1,80 @@
+***** Running training *****
+09/01/2025 20:21:57 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 2000
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Dataloader size = 2000
+  Resume training from step 0
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 1
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Instantaneous batch size per device = 1
+  Total train batch size (w. data & sequence parallel, accumulation) = 24.0
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 24.0
+  Gradient Accumulation steps = 4
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Gradient Accumulation steps = 4
+  Total optimization steps per epoch = 300
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 1.988397348 B
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 1.988397348 B
+  Master weight dtype: torch.bfloat16
+09/01/2025 20:21:57 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:11<00:00,  1.36it/s]
+09/01/2025 20:22:09 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:11<00:00,  1.49it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.49it/s]
+09/01/2025 20:22:21 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.50it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.49it/s]
+09/01/2025 20:22:32 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.50it/s]
+--> decode image and save to log dir...
+Sampling Progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.49it/s]
+09/01/2025 20:22:44 - INFO - utils.data_utils -   --> decode image and save to log dir...███████████████████████████████████████████████████████████████| 16/16 [00:10<00:00,  1.50it/s]
+--> decode image and save to log dir...
+gathered_reward {'ctr_reward': [], 'ecp_reward': [], 't2i_reward': [], 'hps_reward': tensor([0.0674, 0.0698, 0.0706, 0.0688, 0.0238, 0.0225, 0.0280, 0.0271, 0.0640,
+        0.0599, 0.0580, 0.0580, 0.0256, 0.0246, 0.0243, 0.0276, 0.0776, 0.0796,
+        0.0801, 0.0769, 0.0205, 0.0180, 0.0191, 0.0175], device='cuda:0')}
+idx i:  0
+ratio: 1.00
+09/01/2025 20:23:03 - INFO - utils.data_utils -   ratio: 1.00
+advantage -1.2744
+09/01/2025 20:23:03 - INFO - utils.data_utils -   advantage -1.2744
+final loss: 0.0354
+09/01/2025 20:23:03 - INFO - utils.data_utils -   final loss: 0.0354
+idx i:  1
+ratio: 1.00
+09/01/2025 20:23:22 - INFO - utils.data_utils -   ratio: 1.00
+advantage 0.4987
+09/01/2025 20:23:22 - INFO - utils.data_utils -   advantage 0.4987
+final loss: -0.0139
+09/01/2025 20:23:22 - INFO - utils.data_utils -   final loss: -0.0139
+idx i:  2
+ratio: 1.00
+09/01/2025 20:23:41 - INFO - utils.data_utils -   ratio: 1.00
+advantage 1.0306
+09/01/2025 20:23:41 - INFO - utils.data_utils -   advantage 1.0306
+final loss: -0.0286
+09/01/2025 20:23:41 - INFO - utils.data_utils -   final loss: -0.0286
+idx i:  3
+grad_norm_
+ratio: 1.00
+09/01/2025 20:23:59 - INFO - utils.data_utils -   ratio: 1.00
+advantage -0.2549
+09/01/2025 20:23:59 - INFO - utils.data_utils -   advantage -0.2549
+final loss: 0.0071
+09/01/2025 20:23:59 - INFO - utils.data_utils -   final loss: 0.0071
+Traceback (most recent call last):
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1536, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1182, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 971, in train_one_step
+    return total_loss, grad_norm.item()
+NameError: name 'grad_norm' is not defined. Did you mean: 'max_grad_norm'?
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1536, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1182, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 971, in train_one_step
+[rank0]:     return total_loss, grad_norm.item()
+[rank0]: NameError: name 'grad_norm' is not defined. Did you mean: 'max_grad_norm'?

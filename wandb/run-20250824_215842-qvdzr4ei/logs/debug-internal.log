@@ -1,0 +1,18 @@
+{"time":"2025-08-24T21:58:42.359759713+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-24T21:58:42.476317399+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-08-24T21:58:44.651514313+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-08-24T21:58:49.418907561+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-08-24T21:58:58.729887946+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: dial tcp 127.0.0.1:60124: connect: connection refused"}
+{"time":"2025-08-24T21:59:16.552044815+08:00","level":"INFO","msg":"stream: created new stream","id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:16.552102085+08:00","level":"INFO","msg":"stream: started","id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:16.552132004+08:00","level":"INFO","msg":"sender: started","stream_id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:16.552132344+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:16.552171604+08:00","level":"INFO","msg":"handler: started","stream_id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:16.552961403+08:00","level":"INFO","msg":"stream: closing","id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:17.287698079+08:00","level":"ERROR","msg":"HTTP error","status":404,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2025-08-24T21:59:17.287841837+08:00","level":"ERROR","msg":"runfiles: CreateRunFiles returned error: returned error 404: {\"data\":{\"createRunFiles\":null},\"errors\":[{\"message\":\"project /flux not found during createRunFiles\",\"path\":[\"createRunFiles\"]}]}"}
+{"time":"2025-08-24T21:59:17.288261131+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-24T21:59:17.288299491+08:00","level":"INFO","msg":"handler: closed","stream_id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:17.288308711+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:17.28833306+08:00","level":"INFO","msg":"sender: closed","stream_id":"qvdzr4ei"}
+{"time":"2025-08-24T21:59:17.28837542+08:00","level":"INFO","msg":"stream: closed","id":"qvdzr4ei"}

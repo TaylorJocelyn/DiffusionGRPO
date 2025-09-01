@@ -1,0 +1,7 @@
+{"time":"2025-08-24T06:01:56.710688475+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-24T06:01:57.822942233+08:00","level":"INFO","msg":"stream: created new stream","id":"gynoqyfk"}
+{"time":"2025-08-24T06:01:57.822983443+08:00","level":"INFO","msg":"stream: started","id":"gynoqyfk"}
+{"time":"2025-08-24T06:01:57.823001432+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"gynoqyfk"}
+{"time":"2025-08-24T06:01:57.823008532+08:00","level":"INFO","msg":"handler: started","stream_id":"gynoqyfk"}
+{"time":"2025-08-24T06:01:57.823042052+08:00","level":"INFO","msg":"sender: started","stream_id":"gynoqyfk"}
+{"time":"2025-08-24T06:01:58.848661687+08:00","level":"INFO","msg":"stream: closing","id":"gynoqyfk"}

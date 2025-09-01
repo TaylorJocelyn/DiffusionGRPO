@@ -1,0 +1,14 @@
+.vscode/
+*.pyc
+*.pyo
+*.pyd
+*.jpg
+*.png
+__pycache__/
+runs/*
+train/
+cache/
+HPSv3/*
+models/*
+data/*
+

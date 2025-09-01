@@ -1,0 +1,62 @@
+***** Running training *****
+08/24/2025 06:34:52 - INFO - utils.data_utils -   ***** Running training *****
+  Num examples = 11995
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Num examples = 11995
+  Dataloader size = 1999
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Dataloader size = 1999
+  Resume training from step 0
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Resume training from step 0
+  Instantaneous batch size per device = 2
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Instantaneous batch size per device = 2
+  Total train batch size (w. data & sequence parallel, accumulation) = 144.0
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Total train batch size (w. data & sequence parallel, accumulation) = 144.0
+  Gradient Accumulation steps = 12
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Gradient Accumulation steps = 12
+  Total optimization steps per epoch = 300
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Total optimization steps per epoch = 300
+  Total training parameters per FSDP shard = 3.967136139 B
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Total training parameters per FSDP shard = 3.967136139 B
+  Master weight dtype: torch.bfloat16
+08/24/2025 06:34:52 - INFO - utils.data_utils -     Master weight dtype: torch.bfloat16
+Sampling Progress:   0%|                                                                                                                                         | 0/20 [00:02<?, ?it/s]
+Traceback (most recent call last):                                                                                                                               | 0/20 [00:00<?, ?it/s]
+hidden_states shape:  torch.Size([1, 4096, 64])
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1347, in <module>
+    main(args)
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 992, in main
+    loss, grad_norm = train_one_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 626, in train_one_step
+    rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 454, in sample_reference_model
+    z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+  File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 297, in run_sample_step
+    pred = tranformer_forward(
+  File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer.py", line 93, in tranformer_forward
+    hidden_states = self.x_embedder(hidden_states)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: setStorage: sizes [64, 3072], strides [1, 64], storage offset 44848128, and itemsize 2 requiring a storage size of 90089472 are out of bounds for storage of size 0
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 1347, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 992, in main
+[rank0]:     loss, grad_norm = train_one_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 626, in train_one_step
+[rank0]:     rewards, all_latents, all_log_probs, sigma_schedule, all_image_ids, all_condition_latents, all_condition_ids, all_condition_type_ids = sample_reference_model(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 454, in sample_reference_model
+[rank0]:     z, latents, batch_latents, batch_log_probs, batch_condition_latents, batch_condition_ids, batch_condition_type_ids = run_sample_step(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/train_grpo_flux.py", line 297, in run_sample_step
+[rank0]:     pred = tranformer_forward(
+[rank0]:   File "/root/autodl-tmp/DiffusionGRPO/src/flux/transformer.py", line 93, in tranformer_forward
+[rank0]:     hidden_states = self.x_embedder(hidden_states)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/aigc_rl/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank0]:     return F.linear(input, self.weight, self.bias)
+[rank0]: RuntimeError: setStorage: sizes [64, 3072], strides [1, 64], storage offset 44848128, and itemsize 2 requiring a storage size of 90089472 are out of bounds for storage of size 0

@@ -1,0 +1,7 @@
+{"time":"2025-09-01T23:26:35.999864741+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-09-01T23:26:36.578618414+08:00","level":"INFO","msg":"stream: created new stream","id":"i4eoov13"}
+{"time":"2025-09-01T23:26:36.578656433+08:00","level":"INFO","msg":"stream: started","id":"i4eoov13"}
+{"time":"2025-09-01T23:26:36.578674393+08:00","level":"INFO","msg":"sender: started","stream_id":"i4eoov13"}
+{"time":"2025-09-01T23:26:36.578703843+08:00","level":"INFO","msg":"handler: started","stream_id":"i4eoov13"}
+{"time":"2025-09-01T23:26:36.578681493+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"i4eoov13"}
+{"time":"2025-09-01T23:33:14.514233472+08:00","level":"INFO","msg":"stream: closing","id":"i4eoov13"}

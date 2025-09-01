@@ -1,0 +1,6 @@
+{"time":"2025-08-19T14:38:33.01246362+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-19T14:38:33.387553109+08:00","level":"INFO","msg":"stream: created new stream","id":"fij4dvg5"}
+{"time":"2025-08-19T14:38:33.387588764+08:00","level":"INFO","msg":"stream: started","id":"fij4dvg5"}
+{"time":"2025-08-19T14:38:33.387608694+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"fij4dvg5"}
+{"time":"2025-08-19T14:38:33.387620389+08:00","level":"INFO","msg":"sender: started","stream_id":"fij4dvg5"}
+{"time":"2025-08-19T14:38:33.387638398+08:00","level":"INFO","msg":"handler: started","stream_id":"fij4dvg5"}

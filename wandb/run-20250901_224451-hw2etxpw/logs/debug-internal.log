@@ -1,0 +1,13 @@
+{"time":"2025-09-01T22:44:51.753663015+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-09-01T22:44:52.34426834+08:00","level":"INFO","msg":"stream: created new stream","id":"hw2etxpw"}
+{"time":"2025-09-01T22:44:52.344324339+08:00","level":"INFO","msg":"stream: started","id":"hw2etxpw"}
+{"time":"2025-09-01T22:44:52.344356399+08:00","level":"INFO","msg":"sender: started","stream_id":"hw2etxpw"}
+{"time":"2025-09-01T22:44:52.344351299+08:00","level":"INFO","msg":"handler: started","stream_id":"hw2etxpw"}
+{"time":"2025-09-01T22:44:52.344378289+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"hw2etxpw"}
+{"time":"2025-09-01T22:45:11.376981061+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/22351033-zhejiang-university/flux/hw2etxpw/file_stream\": EOF"}
+{"time":"2025-09-01T22:47:56.185159598+08:00","level":"INFO","msg":"stream: closing","id":"hw2etxpw"}
+{"time":"2025-09-01T22:47:57.274749089+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-01T22:47:57.842562721+08:00","level":"INFO","msg":"handler: closed","stream_id":"hw2etxpw"}
+{"time":"2025-09-01T22:47:57.84263693+08:00","level":"INFO","msg":"sender: closed","stream_id":"hw2etxpw"}
+{"time":"2025-09-01T22:47:57.8426356+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hw2etxpw"}
+{"time":"2025-09-01T22:47:57.842828258+08:00","level":"INFO","msg":"stream: closed","id":"hw2etxpw"}

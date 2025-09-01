@@ -1,0 +1,12 @@
+{"time":"2025-08-25T01:02:05.802038804+08:00","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2025-08-25T01:02:06.502754075+08:00","level":"INFO","msg":"stream: created new stream","id":"wrwg4nui"}
+{"time":"2025-08-25T01:02:06.502804574+08:00","level":"INFO","msg":"stream: started","id":"wrwg4nui"}
+{"time":"2025-08-25T01:02:06.502821364+08:00","level":"INFO","msg":"sender: started","stream_id":"wrwg4nui"}
+{"time":"2025-08-25T01:02:06.502849484+08:00","level":"INFO","msg":"handler: started","stream_id":"wrwg4nui"}
+{"time":"2025-08-25T01:02:06.502827454+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"wrwg4nui"}
+{"time":"2025-08-25T01:03:03.057730508+08:00","level":"INFO","msg":"stream: closing","id":"wrwg4nui"}
+{"time":"2025-08-25T01:03:04.557418242+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-25T01:03:05.096865118+08:00","level":"INFO","msg":"handler: closed","stream_id":"wrwg4nui"}
+{"time":"2025-08-25T01:03:05.096916747+08:00","level":"INFO","msg":"sender: closed","stream_id":"wrwg4nui"}
+{"time":"2025-08-25T01:03:05.096913637+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wrwg4nui"}
+{"time":"2025-08-25T01:03:05.097238594+08:00","level":"INFO","msg":"stream: closed","id":"wrwg4nui"}
