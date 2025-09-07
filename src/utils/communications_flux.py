@@ -385,3 +385,89 @@ def sp_parallel_dataloader_wrapper(
                             depth_img, 
                             position_delta
                     )
+
+def prepare_sequence_parallel_uncond_data(
+    encoder_hidden_states, pooled_prompt_embeds, text_ids, caption
+):
+    if nccl_info.sp_size == 1:
+        return (
+            encoder_hidden_states,
+            pooled_prompt_embeds,
+            text_ids, 
+            caption
+        )
+
+    def prepare(
+        encoder_hidden_states, pooled_prompt_embeds, text_ids, caption
+    ):
+        #hidden_states = all_to_all(hidden_states, scatter_dim=2, gather_dim=0)
+        encoder_hidden_states = all_to_all(
+            encoder_hidden_states, scatter_dim=1, gather_dim=0
+        )
+        #attention_mask = all_to_all(attention_mask, scatter_dim=1, gather_dim=0)
+        pooled_prompt_embeds = all_to_all(
+            pooled_prompt_embeds, scatter_dim=1, gather_dim=0
+        )
+        text_ids = all_to_all(text_ids, scatter_dim=1, gather_dim=0)
+        return (
+            encoder_hidden_states,
+            pooled_prompt_embeds,
+            text_ids, 
+            caption
+        )
+
+    sp_size = nccl_info.sp_size
+    #frame = hidden_states.shape[2]
+    #assert frame % sp_size == 0, "frame should be a multiple of sp_size"
+
+    (
+        encoder_hidden_states,
+        pooled_prompt_embeds,
+        text_ids, 
+        caption
+    ) = prepare(
+        #hidden_states,
+        encoder_hidden_states.repeat(1, sp_size, 1),
+        pooled_prompt_embeds.repeat(1, sp_size, 1, 1),
+        text_ids.repeat(1, sp_size),
+        caption
+    )
+
+    return encoder_hidden_states, pooled_prompt_embeds, text_ids, caption
+
+
+def sp_parallel_dataloader_wrapper_uncond(
+    dataloader, device, train_batch_size, sp_size, train_sp_batch_size
+):
+    while True:
+        for data_item in dataloader:
+            encoder_hidden_states, pooled_prompt_embeds, text_ids, caption = data_item
+            #latents = latents.to(device)
+            encoder_hidden_states = encoder_hidden_states.to(device)
+            pooled_prompt_embeds = pooled_prompt_embeds.to(device)
+            text_ids = text_ids.to(device)
+
+            #frame = latents.shape[2]
+            frame = 19
+            if frame == 1:
+                yield encoder_hidden_states, pooled_prompt_embeds, text_ids, caption
+            else:
+                encoder_hidden_states, pooled_prompt_embeds, text_ids, caption = prepare_sequence_parallel_uncond_data(
+                    encoder_hidden_states, pooled_prompt_embeds, text_ids, caption
+                )
+                assert (
+                    train_batch_size * sp_size >= train_sp_batch_size
+                ), "train_batch_size * sp_size should be greater than train_sp_batch_size"
+                for iter in range(train_batch_size * sp_size // train_sp_batch_size):
+                    st_idx = iter * train_sp_batch_size
+                    ed_idx = (iter + 1) * train_sp_batch_size
+                    encoder_hidden_states = encoder_hidden_states[st_idx:ed_idx]
+                    pooled_prompt_embeds = pooled_prompt_embeds[st_idx:ed_idx]
+                    text_ids = text_ids[st_idx:ed_idx]
+                    
+                    yield (
+                            encoder_hidden_states,
+                            pooled_prompt_embeds,
+                            text_ids, 
+                            caption
+                    )
